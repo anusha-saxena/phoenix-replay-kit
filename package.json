@@ -1,0 +1,34 @@
+{
+  "name": "phoenix-replay-kit",
+  "version": "1.0.0",
+  "description": "Offline historical strategy regression data foundation for Phoenix perpetuals",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "fetch:candles": "node --import tsx scripts/fetch-candles.ts",
+    "validate:candles": "node --import tsx scripts/validate-candles.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anusha-saxena/phoenix-replay-kit.git"
+  },
+  "keywords": [],
+  "author": "Anusha Saxena",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/anusha-saxena/phoenix-replay-kit/issues"
+  },
+  "homepage": "https://github.com/anusha-saxena/phoenix-replay-kit#readme",
+  "dependencies": {
+    "@ellipsis-labs/rise": "^0.5.38"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
