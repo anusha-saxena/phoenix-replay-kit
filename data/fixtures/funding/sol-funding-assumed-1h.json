@@ -1,0 +1,2390 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "kind": "funding",
+    "symbol": "SOL",
+    "marketId": 1,
+    "source": "phoenix_rise_http",
+    "method": "funding.getFundingRateHistory",
+    "fetchedAtMs": null,
+    "fetchedAtKnown": false,
+    "rateUnit": "percentage_points",
+    "unitBasis": "field_name_interpretation",
+    "availability": {
+      "model": "timestamp_plus_lag",
+      "lagMs": 3600000,
+      "assumed": true
+    },
+    "recordCount": 168,
+    "integrity": {
+      "outOfOrder": 0,
+      "duplicatesRemoved": 0
+    },
+    "coverage": {
+      "firstEventMs": 1790870400000,
+      "lastEventMs": 1791471600000,
+      "requestedWindowKnown": false,
+      "complete": null
+    }
+  },
+  "records": [
+    {
+      "eventTimeMs": 1790870400000,
+      "availableAtMs": 1790874000000,
+      "raw": {
+        "timestamp": 1790870400,
+        "fundingRatePercentage": "0.003745"
+      },
+      "rawFundingRatePercentage": "0.003745",
+      "fundingRatePercentage": 0.003745
+    },
+    {
+      "eventTimeMs": 1790874000000,
+      "availableAtMs": 1790877600000,
+      "raw": {
+        "timestamp": 1790874000,
+        "fundingRatePercentage": "0.003838"
+      },
+      "rawFundingRatePercentage": "0.003838",
+      "fundingRatePercentage": 0.003838
+    },
+    {
+      "eventTimeMs": 1790877600000,
+      "availableAtMs": 1790881200000,
+      "raw": {
+        "timestamp": 1790877600,
+        "fundingRatePercentage": "0.004305"
+      },
+      "rawFundingRatePercentage": "0.004305",
+      "fundingRatePercentage": 0.004305
+    },
+    {
+      "eventTimeMs": 1790881201000,
+      "availableAtMs": 1790884801000,
+      "raw": {
+        "timestamp": 1790881201,
+        "fundingRatePercentage": "0.003208"
+      },
+      "rawFundingRatePercentage": "0.003208",
+      "fundingRatePercentage": 0.003208
+    },
+    {
+      "eventTimeMs": 1790884800000,
+      "availableAtMs": 1790888400000,
+      "raw": {
+        "timestamp": 1790884800,
+        "fundingRatePercentage": "0.002536"
+      },
+      "rawFundingRatePercentage": "0.002536",
+      "fundingRatePercentage": 0.002536
+    },
+    {
+      "eventTimeMs": 1790888400000,
+      "availableAtMs": 1790892000000,
+      "raw": {
+        "timestamp": 1790888400,
+        "fundingRatePercentage": "0.002453"
+      },
+      "rawFundingRatePercentage": "0.002453",
+      "fundingRatePercentage": 0.002453
+    },
+    {
+      "eventTimeMs": 1790892000000,
+      "availableAtMs": 1790895600000,
+      "raw": {
+        "timestamp": 1790892000,
+        "fundingRatePercentage": "0.002039"
+      },
+      "rawFundingRatePercentage": "0.002039",
+      "fundingRatePercentage": 0.002039
+    },
+    {
+      "eventTimeMs": 1790895601000,
+      "availableAtMs": 1790899201000,
+      "raw": {
+        "timestamp": 1790895601,
+        "fundingRatePercentage": "0.001774"
+      },
+      "rawFundingRatePercentage": "0.001774",
+      "fundingRatePercentage": 0.001774
+    },
+    {
+      "eventTimeMs": 1790899200000,
+      "availableAtMs": 1790902800000,
+      "raw": {
+        "timestamp": 1790899200,
+        "fundingRatePercentage": "0.001435"
+      },
+      "rawFundingRatePercentage": "0.001435",
+      "fundingRatePercentage": 0.001435
+    },
+    {
+      "eventTimeMs": 1790902800000,
+      "availableAtMs": 1790906400000,
+      "raw": {
+        "timestamp": 1790902800,
+        "fundingRatePercentage": "0.001597"
+      },
+      "rawFundingRatePercentage": "0.001597",
+      "fundingRatePercentage": 0.001597
+    },
+    {
+      "eventTimeMs": 1790906400000,
+      "availableAtMs": 1790910000000,
+      "raw": {
+        "timestamp": 1790906400,
+        "fundingRatePercentage": "0.001924"
+      },
+      "rawFundingRatePercentage": "0.001924",
+      "fundingRatePercentage": 0.001924
+    },
+    {
+      "eventTimeMs": 1790910001000,
+      "availableAtMs": 1790913601000,
+      "raw": {
+        "timestamp": 1790910001,
+        "fundingRatePercentage": "0.002081"
+      },
+      "rawFundingRatePercentage": "0.002081",
+      "fundingRatePercentage": 0.002081
+    },
+    {
+      "eventTimeMs": 1790913600000,
+      "availableAtMs": 1790917200000,
+      "raw": {
+        "timestamp": 1790913600,
+        "fundingRatePercentage": "0.001072"
+      },
+      "rawFundingRatePercentage": "0.001072",
+      "fundingRatePercentage": 0.001072
+    },
+    {
+      "eventTimeMs": 1790917200000,
+      "availableAtMs": 1790920800000,
+      "raw": {
+        "timestamp": 1790917200,
+        "fundingRatePercentage": "0.000000"
+      },
+      "rawFundingRatePercentage": "0.000000",
+      "fundingRatePercentage": 0
+    },
+    {
+      "eventTimeMs": 1790920800000,
+      "availableAtMs": 1790924400000,
+      "raw": {
+        "timestamp": 1790920800,
+        "fundingRatePercentage": "-0.000082"
+      },
+      "rawFundingRatePercentage": "-0.000082",
+      "fundingRatePercentage": -0.000082
+    },
+    {
+      "eventTimeMs": 1790924400000,
+      "availableAtMs": 1790928000000,
+      "raw": {
+        "timestamp": 1790924400,
+        "fundingRatePercentage": "0.000164"
+      },
+      "rawFundingRatePercentage": "0.000164",
+      "fundingRatePercentage": 0.000164
+    },
+    {
+      "eventTimeMs": 1790928000000,
+      "availableAtMs": 1790931600000,
+      "raw": {
+        "timestamp": 1790928000,
+        "fundingRatePercentage": "0.001725"
+      },
+      "rawFundingRatePercentage": "0.001725",
+      "fundingRatePercentage": 0.001725
+    },
+    {
+      "eventTimeMs": 1790931600000,
+      "availableAtMs": 1790935200000,
+      "raw": {
+        "timestamp": 1790931600,
+        "fundingRatePercentage": "0.000901"
+      },
+      "rawFundingRatePercentage": "0.000901",
+      "fundingRatePercentage": 0.000901
+    },
+    {
+      "eventTimeMs": 1790935200000,
+      "availableAtMs": 1790938800000,
+      "raw": {
+        "timestamp": 1790935200,
+        "fundingRatePercentage": "0.000164"
+      },
+      "rawFundingRatePercentage": "0.000164",
+      "fundingRatePercentage": 0.000164
+    },
+    {
+      "eventTimeMs": 1790938800000,
+      "availableAtMs": 1790942400000,
+      "raw": {
+        "timestamp": 1790938800,
+        "fundingRatePercentage": "0.000656"
+      },
+      "rawFundingRatePercentage": "0.000656",
+      "fundingRatePercentage": 0.000656
+    },
+    {
+      "eventTimeMs": 1790942400000,
+      "availableAtMs": 1790946000000,
+      "raw": {
+        "timestamp": 1790942400,
+        "fundingRatePercentage": "0.001313"
+      },
+      "rawFundingRatePercentage": "0.001313",
+      "fundingRatePercentage": 0.001313
+    },
+    {
+      "eventTimeMs": 1790946000000,
+      "availableAtMs": 1790949600000,
+      "raw": {
+        "timestamp": 1790946000,
+        "fundingRatePercentage": "0.001143"
+      },
+      "rawFundingRatePercentage": "0.001143",
+      "fundingRatePercentage": 0.001143
+    },
+    {
+      "eventTimeMs": 1790949600000,
+      "availableAtMs": 1790953200000,
+      "raw": {
+        "timestamp": 1790949600,
+        "fundingRatePercentage": "-0.000491"
+      },
+      "rawFundingRatePercentage": "-0.000491",
+      "fundingRatePercentage": -0.000491
+    },
+    {
+      "eventTimeMs": 1790953201000,
+      "availableAtMs": 1790956801000,
+      "raw": {
+        "timestamp": 1790953201,
+        "fundingRatePercentage": "0.001078"
+      },
+      "rawFundingRatePercentage": "0.001078",
+      "fundingRatePercentage": 0.001078
+    },
+    {
+      "eventTimeMs": 1790956801000,
+      "availableAtMs": 1790960401000,
+      "raw": {
+        "timestamp": 1790956801,
+        "fundingRatePercentage": "-0.001417"
+      },
+      "rawFundingRatePercentage": "-0.001417",
+      "fundingRatePercentage": -0.001417
+    },
+    {
+      "eventTimeMs": 1790960401000,
+      "availableAtMs": 1790964001000,
+      "raw": {
+        "timestamp": 1790960401,
+        "fundingRatePercentage": "-0.001334"
+      },
+      "rawFundingRatePercentage": "-0.001334",
+      "fundingRatePercentage": -0.001334
+    },
+    {
+      "eventTimeMs": 1790964000000,
+      "availableAtMs": 1790967600000,
+      "raw": {
+        "timestamp": 1790964000,
+        "fundingRatePercentage": "-0.001086"
+      },
+      "rawFundingRatePercentage": "-0.001086",
+      "fundingRatePercentage": -0.001086
+    },
+    {
+      "eventTimeMs": 1790967600000,
+      "availableAtMs": 1790971200000,
+      "raw": {
+        "timestamp": 1790967600,
+        "fundingRatePercentage": "-0.000169"
+      },
+      "rawFundingRatePercentage": "-0.000169",
+      "fundingRatePercentage": -0.000169
+    },
+    {
+      "eventTimeMs": 1790971200000,
+      "availableAtMs": 1790974800000,
+      "raw": {
+        "timestamp": 1790971200,
+        "fundingRatePercentage": "0.000593"
+      },
+      "rawFundingRatePercentage": "0.000593",
+      "fundingRatePercentage": 0.000593
+    },
+    {
+      "eventTimeMs": 1790974800000,
+      "availableAtMs": 1790978400000,
+      "raw": {
+        "timestamp": 1790974800,
+        "fundingRatePercentage": "0.000679"
+      },
+      "rawFundingRatePercentage": "0.000679",
+      "fundingRatePercentage": 0.000679
+    },
+    {
+      "eventTimeMs": 1790978400000,
+      "availableAtMs": 1790982000000,
+      "raw": {
+        "timestamp": 1790978400,
+        "fundingRatePercentage": "0.000592"
+      },
+      "rawFundingRatePercentage": "0.000592",
+      "fundingRatePercentage": 0.000592
+    },
+    {
+      "eventTimeMs": 1790982000000,
+      "availableAtMs": 1790985600000,
+      "raw": {
+        "timestamp": 1790982000,
+        "fundingRatePercentage": "0.000590"
+      },
+      "rawFundingRatePercentage": "0.000590",
+      "fundingRatePercentage": 0.00059
+    },
+    {
+      "eventTimeMs": 1790985600000,
+      "availableAtMs": 1790989200000,
+      "raw": {
+        "timestamp": 1790985600,
+        "fundingRatePercentage": "0.000674"
+      },
+      "rawFundingRatePercentage": "0.000674",
+      "fundingRatePercentage": 0.000674
+    },
+    {
+      "eventTimeMs": 1790989200000,
+      "availableAtMs": 1790992800000,
+      "raw": {
+        "timestamp": 1790989200,
+        "fundingRatePercentage": "0.001176"
+      },
+      "rawFundingRatePercentage": "0.001176",
+      "fundingRatePercentage": 0.001176
+    },
+    {
+      "eventTimeMs": 1790992800000,
+      "availableAtMs": 1790996400000,
+      "raw": {
+        "timestamp": 1790992800,
+        "fundingRatePercentage": "0.000923"
+      },
+      "rawFundingRatePercentage": "0.000923",
+      "fundingRatePercentage": 0.000923
+    },
+    {
+      "eventTimeMs": 1790996400000,
+      "availableAtMs": 1791000000000,
+      "raw": {
+        "timestamp": 1790996400,
+        "fundingRatePercentage": "0.000673"
+      },
+      "rawFundingRatePercentage": "0.000673",
+      "fundingRatePercentage": 0.000673
+    },
+    {
+      "eventTimeMs": 1791000000000,
+      "availableAtMs": 1791003600000,
+      "raw": {
+        "timestamp": 1791000000,
+        "fundingRatePercentage": "0.001089"
+      },
+      "rawFundingRatePercentage": "0.001089",
+      "fundingRatePercentage": 0.001089
+    },
+    {
+      "eventTimeMs": 1791003600000,
+      "availableAtMs": 1791007200000,
+      "raw": {
+        "timestamp": 1791003600,
+        "fundingRatePercentage": "0.001174"
+      },
+      "rawFundingRatePercentage": "0.001174",
+      "fundingRatePercentage": 0.001174
+    },
+    {
+      "eventTimeMs": 1791007201000,
+      "availableAtMs": 1791010801000,
+      "raw": {
+        "timestamp": 1791007201,
+        "fundingRatePercentage": "0.001421"
+      },
+      "rawFundingRatePercentage": "0.001421",
+      "fundingRatePercentage": 0.001421
+    },
+    {
+      "eventTimeMs": 1791010800000,
+      "availableAtMs": 1791014400000,
+      "raw": {
+        "timestamp": 1791010800,
+        "fundingRatePercentage": "0.001339"
+      },
+      "rawFundingRatePercentage": "0.001339",
+      "fundingRatePercentage": 0.001339
+    },
+    {
+      "eventTimeMs": 1791014400000,
+      "availableAtMs": 1791018000000,
+      "raw": {
+        "timestamp": 1791014400,
+        "fundingRatePercentage": "0.001173"
+      },
+      "rawFundingRatePercentage": "0.001173",
+      "fundingRatePercentage": 0.001173
+    },
+    {
+      "eventTimeMs": 1791018000000,
+      "availableAtMs": 1791021600000,
+      "raw": {
+        "timestamp": 1791018000,
+        "fundingRatePercentage": "0.001173"
+      },
+      "rawFundingRatePercentage": "0.001173",
+      "fundingRatePercentage": 0.001173
+    },
+    {
+      "eventTimeMs": 1791021600000,
+      "availableAtMs": 1791025200000,
+      "raw": {
+        "timestamp": 1791021600,
+        "fundingRatePercentage": "0.001089"
+      },
+      "rawFundingRatePercentage": "0.001089",
+      "fundingRatePercentage": 0.001089
+    },
+    {
+      "eventTimeMs": 1791025200000,
+      "availableAtMs": 1791028800000,
+      "raw": {
+        "timestamp": 1791025200,
+        "fundingRatePercentage": "0.001255"
+      },
+      "rawFundingRatePercentage": "0.001255",
+      "fundingRatePercentage": 0.001255
+    },
+    {
+      "eventTimeMs": 1791028800000,
+      "availableAtMs": 1791032400000,
+      "raw": {
+        "timestamp": 1791028800,
+        "fundingRatePercentage": "0.001089"
+      },
+      "rawFundingRatePercentage": "0.001089",
+      "fundingRatePercentage": 0.001089
+    },
+    {
+      "eventTimeMs": 1791032401000,
+      "availableAtMs": 1791036001000,
+      "raw": {
+        "timestamp": 1791032401,
+        "fundingRatePercentage": "0.001004"
+      },
+      "rawFundingRatePercentage": "0.001004",
+      "fundingRatePercentage": 0.001004
+    },
+    {
+      "eventTimeMs": 1791036000000,
+      "availableAtMs": 1791039600000,
+      "raw": {
+        "timestamp": 1791036000,
+        "fundingRatePercentage": "0.000837"
+      },
+      "rawFundingRatePercentage": "0.000837",
+      "fundingRatePercentage": 0.000837
+    },
+    {
+      "eventTimeMs": 1791039600000,
+      "availableAtMs": 1791043200000,
+      "raw": {
+        "timestamp": 1791039600,
+        "fundingRatePercentage": "0.000918"
+      },
+      "rawFundingRatePercentage": "0.000918",
+      "fundingRatePercentage": 0.000918
+    },
+    {
+      "eventTimeMs": 1791043200000,
+      "availableAtMs": 1791046800000,
+      "raw": {
+        "timestamp": 1791043200,
+        "fundingRatePercentage": "0.000585"
+      },
+      "rawFundingRatePercentage": "0.000585",
+      "fundingRatePercentage": 0.000585
+    },
+    {
+      "eventTimeMs": 1791046800000,
+      "availableAtMs": 1791050400000,
+      "raw": {
+        "timestamp": 1791046800,
+        "fundingRatePercentage": "0.000668"
+      },
+      "rawFundingRatePercentage": "0.000668",
+      "fundingRatePercentage": 0.000668
+    },
+    {
+      "eventTimeMs": 1791050400000,
+      "availableAtMs": 1791054000000,
+      "raw": {
+        "timestamp": 1791050400,
+        "fundingRatePercentage": "0.000750"
+      },
+      "rawFundingRatePercentage": "0.000750",
+      "fundingRatePercentage": 0.00075
+    },
+    {
+      "eventTimeMs": 1791054000000,
+      "availableAtMs": 1791057600000,
+      "raw": {
+        "timestamp": 1791054000,
+        "fundingRatePercentage": "0.000917"
+      },
+      "rawFundingRatePercentage": "0.000917",
+      "fundingRatePercentage": 0.000917
+    },
+    {
+      "eventTimeMs": 1791057600000,
+      "availableAtMs": 1791061200000,
+      "raw": {
+        "timestamp": 1791057600,
+        "fundingRatePercentage": "0.000668"
+      },
+      "rawFundingRatePercentage": "0.000668",
+      "fundingRatePercentage": 0.000668
+    },
+    {
+      "eventTimeMs": 1791061200000,
+      "availableAtMs": 1791064800000,
+      "raw": {
+        "timestamp": 1791061200,
+        "fundingRatePercentage": "0.000918"
+      },
+      "rawFundingRatePercentage": "0.000918",
+      "fundingRatePercentage": 0.000918
+    },
+    {
+      "eventTimeMs": 1791064800000,
+      "availableAtMs": 1791068400000,
+      "raw": {
+        "timestamp": 1791064800,
+        "fundingRatePercentage": "0.000501"
+      },
+      "rawFundingRatePercentage": "0.000501",
+      "fundingRatePercentage": 0.000501
+    },
+    {
+      "eventTimeMs": 1791068400000,
+      "availableAtMs": 1791072000000,
+      "raw": {
+        "timestamp": 1791068400,
+        "fundingRatePercentage": "0.000919"
+      },
+      "rawFundingRatePercentage": "0.000919",
+      "fundingRatePercentage": 0.000919
+    },
+    {
+      "eventTimeMs": 1791072000000,
+      "availableAtMs": 1791075600000,
+      "raw": {
+        "timestamp": 1791072000,
+        "fundingRatePercentage": "0.000669"
+      },
+      "rawFundingRatePercentage": "0.000669",
+      "fundingRatePercentage": 0.000669
+    },
+    {
+      "eventTimeMs": 1791075601000,
+      "availableAtMs": 1791079201000,
+      "raw": {
+        "timestamp": 1791075601,
+        "fundingRatePercentage": "0.000915"
+      },
+      "rawFundingRatePercentage": "0.000915",
+      "fundingRatePercentage": 0.000915
+    },
+    {
+      "eventTimeMs": 1791079200000,
+      "availableAtMs": 1791082800000,
+      "raw": {
+        "timestamp": 1791079200,
+        "fundingRatePercentage": "0.000915"
+      },
+      "rawFundingRatePercentage": "0.000915",
+      "fundingRatePercentage": 0.000915
+    },
+    {
+      "eventTimeMs": 1791082800000,
+      "availableAtMs": 1791086400000,
+      "raw": {
+        "timestamp": 1791082800,
+        "fundingRatePercentage": "0.000830"
+      },
+      "rawFundingRatePercentage": "0.000830",
+      "fundingRatePercentage": 0.00083
+    },
+    {
+      "eventTimeMs": 1791086400000,
+      "availableAtMs": 1791090000000,
+      "raw": {
+        "timestamp": 1791086400,
+        "fundingRatePercentage": "0.001159"
+      },
+      "rawFundingRatePercentage": "0.001159",
+      "fundingRatePercentage": 0.001159
+    },
+    {
+      "eventTimeMs": 1791090000000,
+      "availableAtMs": 1791093600000,
+      "raw": {
+        "timestamp": 1791090000,
+        "fundingRatePercentage": "0.001326"
+      },
+      "rawFundingRatePercentage": "0.001326",
+      "fundingRatePercentage": 0.001326
+    },
+    {
+      "eventTimeMs": 1791093600000,
+      "availableAtMs": 1791097200000,
+      "raw": {
+        "timestamp": 1791093600,
+        "fundingRatePercentage": "0.001489"
+      },
+      "rawFundingRatePercentage": "0.001489",
+      "fundingRatePercentage": 0.001489
+    },
+    {
+      "eventTimeMs": 1791097200000,
+      "availableAtMs": 1791100800000,
+      "raw": {
+        "timestamp": 1791097200,
+        "fundingRatePercentage": "0.001240"
+      },
+      "rawFundingRatePercentage": "0.001240",
+      "fundingRatePercentage": 0.00124
+    },
+    {
+      "eventTimeMs": 1791100800000,
+      "availableAtMs": 1791104400000,
+      "raw": {
+        "timestamp": 1791100800,
+        "fundingRatePercentage": "0.001403"
+      },
+      "rawFundingRatePercentage": "0.001403",
+      "fundingRatePercentage": 0.001403
+    },
+    {
+      "eventTimeMs": 1791104400000,
+      "availableAtMs": 1791108000000,
+      "raw": {
+        "timestamp": 1791104400,
+        "fundingRatePercentage": "0.001487"
+      },
+      "rawFundingRatePercentage": "0.001487",
+      "fundingRatePercentage": 0.001487
+    },
+    {
+      "eventTimeMs": 1791108000000,
+      "availableAtMs": 1791111600000,
+      "raw": {
+        "timestamp": 1791108000,
+        "fundingRatePercentage": "0.001731"
+      },
+      "rawFundingRatePercentage": "0.001731",
+      "fundingRatePercentage": 0.001731
+    },
+    {
+      "eventTimeMs": 1791111600000,
+      "availableAtMs": 1791115200000,
+      "raw": {
+        "timestamp": 1791111600,
+        "fundingRatePercentage": "0.001154"
+      },
+      "rawFundingRatePercentage": "0.001154",
+      "fundingRatePercentage": 0.001154
+    },
+    {
+      "eventTimeMs": 1791115200000,
+      "availableAtMs": 1791118800000,
+      "raw": {
+        "timestamp": 1791115200,
+        "fundingRatePercentage": "0.000000"
+      },
+      "rawFundingRatePercentage": "0.000000",
+      "fundingRatePercentage": 0
+    },
+    {
+      "eventTimeMs": 1791118800000,
+      "availableAtMs": 1791122400000,
+      "raw": {
+        "timestamp": 1791118800,
+        "fundingRatePercentage": "-0.000660"
+      },
+      "rawFundingRatePercentage": "-0.000660",
+      "fundingRatePercentage": -0.00066
+    },
+    {
+      "eventTimeMs": 1791122400000,
+      "availableAtMs": 1791126000000,
+      "raw": {
+        "timestamp": 1791122400,
+        "fundingRatePercentage": "-0.000740"
+      },
+      "rawFundingRatePercentage": "-0.000740",
+      "fundingRatePercentage": -0.00074
+    },
+    {
+      "eventTimeMs": 1791126000000,
+      "availableAtMs": 1791129600000,
+      "raw": {
+        "timestamp": 1791126000,
+        "fundingRatePercentage": "-0.001313"
+      },
+      "rawFundingRatePercentage": "-0.001313",
+      "fundingRatePercentage": -0.001313
+    },
+    {
+      "eventTimeMs": 1791129601000,
+      "availableAtMs": 1791133201000,
+      "raw": {
+        "timestamp": 1791129601,
+        "fundingRatePercentage": "-0.001646"
+      },
+      "rawFundingRatePercentage": "-0.001646",
+      "fundingRatePercentage": -0.001646
+    },
+    {
+      "eventTimeMs": 1791133200000,
+      "availableAtMs": 1791136800000,
+      "raw": {
+        "timestamp": 1791133200,
+        "fundingRatePercentage": "-0.001972"
+      },
+      "rawFundingRatePercentage": "-0.001972",
+      "fundingRatePercentage": -0.001972
+    },
+    {
+      "eventTimeMs": 1791136800000,
+      "availableAtMs": 1791140400000,
+      "raw": {
+        "timestamp": 1791136800,
+        "fundingRatePercentage": "-0.002553"
+      },
+      "rawFundingRatePercentage": "-0.002553",
+      "fundingRatePercentage": -0.002553
+    },
+    {
+      "eventTimeMs": 1791140400000,
+      "availableAtMs": 1791144000000,
+      "raw": {
+        "timestamp": 1791140400,
+        "fundingRatePercentage": "0.000082"
+      },
+      "rawFundingRatePercentage": "0.000082",
+      "fundingRatePercentage": 0.000082
+    },
+    {
+      "eventTimeMs": 1791144000000,
+      "availableAtMs": 1791147600000,
+      "raw": {
+        "timestamp": 1791144000,
+        "fundingRatePercentage": "-0.000991"
+      },
+      "rawFundingRatePercentage": "-0.000991",
+      "fundingRatePercentage": -0.000991
+    },
+    {
+      "eventTimeMs": 1791147600000,
+      "availableAtMs": 1791151200000,
+      "raw": {
+        "timestamp": 1791147600,
+        "fundingRatePercentage": "0.002143"
+      },
+      "rawFundingRatePercentage": "0.002143",
+      "fundingRatePercentage": 0.002143
+    },
+    {
+      "eventTimeMs": 1791151200000,
+      "availableAtMs": 1791154800000,
+      "raw": {
+        "timestamp": 1791151200,
+        "fundingRatePercentage": "0.001897"
+      },
+      "rawFundingRatePercentage": "0.001897",
+      "fundingRatePercentage": 0.001897
+    },
+    {
+      "eventTimeMs": 1791154800000,
+      "availableAtMs": 1791158400000,
+      "raw": {
+        "timestamp": 1791154800,
+        "fundingRatePercentage": "0.002053"
+      },
+      "rawFundingRatePercentage": "0.002053",
+      "fundingRatePercentage": 0.002053
+    },
+    {
+      "eventTimeMs": 1791158400000,
+      "availableAtMs": 1791162000000,
+      "raw": {
+        "timestamp": 1791158400,
+        "fundingRatePercentage": "0.002138"
+      },
+      "rawFundingRatePercentage": "0.002138",
+      "fundingRatePercentage": 0.002138
+    },
+    {
+      "eventTimeMs": 1791162000000,
+      "availableAtMs": 1791165600000,
+      "raw": {
+        "timestamp": 1791162000,
+        "fundingRatePercentage": "0.001895"
+      },
+      "rawFundingRatePercentage": "0.001895",
+      "fundingRatePercentage": 0.001895
+    },
+    {
+      "eventTimeMs": 1791165600000,
+      "availableAtMs": 1791169200000,
+      "raw": {
+        "timestamp": 1791165600,
+        "fundingRatePercentage": "0.001650"
+      },
+      "rawFundingRatePercentage": "0.001650",
+      "fundingRatePercentage": 0.00165
+    },
+    {
+      "eventTimeMs": 1791169201000,
+      "availableAtMs": 1791172801000,
+      "raw": {
+        "timestamp": 1791169201,
+        "fundingRatePercentage": "0.001650"
+      },
+      "rawFundingRatePercentage": "0.001650",
+      "fundingRatePercentage": 0.00165
+    },
+    {
+      "eventTimeMs": 1791172800000,
+      "availableAtMs": 1791176400000,
+      "raw": {
+        "timestamp": 1791172800,
+        "fundingRatePercentage": "0.001494"
+      },
+      "rawFundingRatePercentage": "0.001494",
+      "fundingRatePercentage": 0.001494
+    },
+    {
+      "eventTimeMs": 1791176400000,
+      "availableAtMs": 1791180000000,
+      "raw": {
+        "timestamp": 1791176400,
+        "fundingRatePercentage": "0.001493"
+      },
+      "rawFundingRatePercentage": "0.001493",
+      "fundingRatePercentage": 0.001493
+    },
+    {
+      "eventTimeMs": 1791180000000,
+      "availableAtMs": 1791183600000,
+      "raw": {
+        "timestamp": 1791180000,
+        "fundingRatePercentage": "0.001162"
+      },
+      "rawFundingRatePercentage": "0.001162",
+      "fundingRatePercentage": 0.001162
+    },
+    {
+      "eventTimeMs": 1791183601000,
+      "availableAtMs": 1791187201000,
+      "raw": {
+        "timestamp": 1791183601,
+        "fundingRatePercentage": "0.001398"
+      },
+      "rawFundingRatePercentage": "0.001398",
+      "fundingRatePercentage": 0.001398
+    },
+    {
+      "eventTimeMs": 1791187200000,
+      "availableAtMs": 1791190800000,
+      "raw": {
+        "timestamp": 1791187200,
+        "fundingRatePercentage": "0.001643"
+      },
+      "rawFundingRatePercentage": "0.001643",
+      "fundingRatePercentage": 0.001643
+    },
+    {
+      "eventTimeMs": 1791190800000,
+      "availableAtMs": 1791194400000,
+      "raw": {
+        "timestamp": 1791190800,
+        "fundingRatePercentage": "0.001651"
+      },
+      "rawFundingRatePercentage": "0.001651",
+      "fundingRatePercentage": 0.001651
+    },
+    {
+      "eventTimeMs": 1791194400000,
+      "availableAtMs": 1791198000000,
+      "raw": {
+        "timestamp": 1791194400,
+        "fundingRatePercentage": "0.001326"
+      },
+      "rawFundingRatePercentage": "0.001326",
+      "fundingRatePercentage": 0.001326
+    },
+    {
+      "eventTimeMs": 1791198000000,
+      "availableAtMs": 1791201600000,
+      "raw": {
+        "timestamp": 1791198000,
+        "fundingRatePercentage": "0.001243"
+      },
+      "rawFundingRatePercentage": "0.001243",
+      "fundingRatePercentage": 0.001243
+    },
+    {
+      "eventTimeMs": 1791201600000,
+      "availableAtMs": 1791205200000,
+      "raw": {
+        "timestamp": 1791201600,
+        "fundingRatePercentage": "0.000827"
+      },
+      "rawFundingRatePercentage": "0.000827",
+      "fundingRatePercentage": 0.000827
+    },
+    {
+      "eventTimeMs": 1791205200000,
+      "availableAtMs": 1791208800000,
+      "raw": {
+        "timestamp": 1791205200,
+        "fundingRatePercentage": "0.000748"
+      },
+      "rawFundingRatePercentage": "0.000748",
+      "fundingRatePercentage": 0.000748
+    },
+    {
+      "eventTimeMs": 1791208800000,
+      "availableAtMs": 1791212400000,
+      "raw": {
+        "timestamp": 1791208800,
+        "fundingRatePercentage": "0.001407"
+      },
+      "rawFundingRatePercentage": "0.001407",
+      "fundingRatePercentage": 0.001407
+    },
+    {
+      "eventTimeMs": 1791212401000,
+      "availableAtMs": 1791216001000,
+      "raw": {
+        "timestamp": 1791212401,
+        "fundingRatePercentage": "0.001589"
+      },
+      "rawFundingRatePercentage": "0.001589",
+      "fundingRatePercentage": 0.001589
+    },
+    {
+      "eventTimeMs": 1791216001000,
+      "availableAtMs": 1791219601000,
+      "raw": {
+        "timestamp": 1791216001,
+        "fundingRatePercentage": "0.001424"
+      },
+      "rawFundingRatePercentage": "0.001424",
+      "fundingRatePercentage": 0.001424
+    },
+    {
+      "eventTimeMs": 1791219600000,
+      "availableAtMs": 1791223200000,
+      "raw": {
+        "timestamp": 1791219600,
+        "fundingRatePercentage": "0.001170"
+      },
+      "rawFundingRatePercentage": "0.001170",
+      "fundingRatePercentage": 0.00117
+    },
+    {
+      "eventTimeMs": 1791223201000,
+      "availableAtMs": 1791226801000,
+      "raw": {
+        "timestamp": 1791223201,
+        "fundingRatePercentage": "0.001166"
+      },
+      "rawFundingRatePercentage": "0.001166",
+      "fundingRatePercentage": 0.001166
+    },
+    {
+      "eventTimeMs": 1791226801000,
+      "availableAtMs": 1791230401000,
+      "raw": {
+        "timestamp": 1791226801,
+        "fundingRatePercentage": "0.001249"
+      },
+      "rawFundingRatePercentage": "0.001249",
+      "fundingRatePercentage": 0.001249
+    },
+    {
+      "eventTimeMs": 1791230400000,
+      "availableAtMs": 1791234000000,
+      "raw": {
+        "timestamp": 1791230400,
+        "fundingRatePercentage": "0.001247"
+      },
+      "rawFundingRatePercentage": "0.001247",
+      "fundingRatePercentage": 0.001247
+    },
+    {
+      "eventTimeMs": 1791234000000,
+      "availableAtMs": 1791237600000,
+      "raw": {
+        "timestamp": 1791234000,
+        "fundingRatePercentage": "0.001160"
+      },
+      "rawFundingRatePercentage": "0.001160",
+      "fundingRatePercentage": 0.00116
+    },
+    {
+      "eventTimeMs": 1791237600000,
+      "availableAtMs": 1791241200000,
+      "raw": {
+        "timestamp": 1791237600,
+        "fundingRatePercentage": "0.000828"
+      },
+      "rawFundingRatePercentage": "0.000828",
+      "fundingRatePercentage": 0.000828
+    },
+    {
+      "eventTimeMs": 1791241200000,
+      "availableAtMs": 1791244800000,
+      "raw": {
+        "timestamp": 1791241200,
+        "fundingRatePercentage": "0.000991"
+      },
+      "rawFundingRatePercentage": "0.000991",
+      "fundingRatePercentage": 0.000991
+    },
+    {
+      "eventTimeMs": 1791244800000,
+      "availableAtMs": 1791248400000,
+      "raw": {
+        "timestamp": 1791244800,
+        "fundingRatePercentage": "0.000662"
+      },
+      "rawFundingRatePercentage": "0.000662",
+      "fundingRatePercentage": 0.000662
+    },
+    {
+      "eventTimeMs": 1791248401000,
+      "availableAtMs": 1791252001000,
+      "raw": {
+        "timestamp": 1791248401,
+        "fundingRatePercentage": "0.000743"
+      },
+      "rawFundingRatePercentage": "0.000743",
+      "fundingRatePercentage": 0.000743
+    },
+    {
+      "eventTimeMs": 1791252000000,
+      "availableAtMs": 1791255600000,
+      "raw": {
+        "timestamp": 1791252000,
+        "fundingRatePercentage": "0.000829"
+      },
+      "rawFundingRatePercentage": "0.000829",
+      "fundingRatePercentage": 0.000829
+    },
+    {
+      "eventTimeMs": 1791255600000,
+      "availableAtMs": 1791259200000,
+      "raw": {
+        "timestamp": 1791255600,
+        "fundingRatePercentage": "0.000665"
+      },
+      "rawFundingRatePercentage": "0.000665",
+      "fundingRatePercentage": 0.000665
+    },
+    {
+      "eventTimeMs": 1791259200000,
+      "availableAtMs": 1791262800000,
+      "raw": {
+        "timestamp": 1791259200,
+        "fundingRatePercentage": "0.000583"
+      },
+      "rawFundingRatePercentage": "0.000583",
+      "fundingRatePercentage": 0.000583
+    },
+    {
+      "eventTimeMs": 1791262800000,
+      "availableAtMs": 1791266400000,
+      "raw": {
+        "timestamp": 1791262800,
+        "fundingRatePercentage": "0.000583"
+      },
+      "rawFundingRatePercentage": "0.000583",
+      "fundingRatePercentage": 0.000583
+    },
+    {
+      "eventTimeMs": 1791266401000,
+      "availableAtMs": 1791270001000,
+      "raw": {
+        "timestamp": 1791266401,
+        "fundingRatePercentage": "0.000501"
+      },
+      "rawFundingRatePercentage": "0.000501",
+      "fundingRatePercentage": 0.000501
+    },
+    {
+      "eventTimeMs": 1791270000000,
+      "availableAtMs": 1791273600000,
+      "raw": {
+        "timestamp": 1791270000,
+        "fundingRatePercentage": "0.001335"
+      },
+      "rawFundingRatePercentage": "0.001335",
+      "fundingRatePercentage": 0.001335
+    },
+    {
+      "eventTimeMs": 1791273600000,
+      "availableAtMs": 1791277200000,
+      "raw": {
+        "timestamp": 1791273600,
+        "fundingRatePercentage": "0.001663"
+      },
+      "rawFundingRatePercentage": "0.001663",
+      "fundingRatePercentage": 0.001663
+    },
+    {
+      "eventTimeMs": 1791277200000,
+      "availableAtMs": 1791280800000,
+      "raw": {
+        "timestamp": 1791277200,
+        "fundingRatePercentage": "0.001825"
+      },
+      "rawFundingRatePercentage": "0.001825",
+      "fundingRatePercentage": 0.001825
+    },
+    {
+      "eventTimeMs": 1791280800000,
+      "availableAtMs": 1791284400000,
+      "raw": {
+        "timestamp": 1791280800,
+        "fundingRatePercentage": "0.001756"
+      },
+      "rawFundingRatePercentage": "0.001756",
+      "fundingRatePercentage": 0.001756
+    },
+    {
+      "eventTimeMs": 1791284400000,
+      "availableAtMs": 1791288000000,
+      "raw": {
+        "timestamp": 1791284400,
+        "fundingRatePercentage": "0.002244"
+      },
+      "rawFundingRatePercentage": "0.002244",
+      "fundingRatePercentage": 0.002244
+    },
+    {
+      "eventTimeMs": 1791288000000,
+      "availableAtMs": 1791291600000,
+      "raw": {
+        "timestamp": 1791288000,
+        "fundingRatePercentage": "0.002409"
+      },
+      "rawFundingRatePercentage": "0.002409",
+      "fundingRatePercentage": 0.002409
+    },
+    {
+      "eventTimeMs": 1791291600000,
+      "availableAtMs": 1791295200000,
+      "raw": {
+        "timestamp": 1791291600,
+        "fundingRatePercentage": "0.001662"
+      },
+      "rawFundingRatePercentage": "0.001662",
+      "fundingRatePercentage": 0.001662
+    },
+    {
+      "eventTimeMs": 1791295200000,
+      "availableAtMs": 1791298800000,
+      "raw": {
+        "timestamp": 1791295200,
+        "fundingRatePercentage": "0.000165"
+      },
+      "rawFundingRatePercentage": "0.000165",
+      "fundingRatePercentage": 0.000165
+    },
+    {
+      "eventTimeMs": 1791298800000,
+      "availableAtMs": 1791302400000,
+      "raw": {
+        "timestamp": 1791298800,
+        "fundingRatePercentage": "0.000493"
+      },
+      "rawFundingRatePercentage": "0.000493",
+      "fundingRatePercentage": 0.000493
+    },
+    {
+      "eventTimeMs": 1791302400000,
+      "availableAtMs": 1791306000000,
+      "raw": {
+        "timestamp": 1791302400,
+        "fundingRatePercentage": "-0.000747"
+      },
+      "rawFundingRatePercentage": "-0.000747",
+      "fundingRatePercentage": -0.000747
+    },
+    {
+      "eventTimeMs": 1791306000000,
+      "availableAtMs": 1791309600000,
+      "raw": {
+        "timestamp": 1791306000,
+        "fundingRatePercentage": "-0.000083"
+      },
+      "rawFundingRatePercentage": "-0.000083",
+      "fundingRatePercentage": -0.000083
+    },
+    {
+      "eventTimeMs": 1791309602000,
+      "availableAtMs": 1791313202000,
+      "raw": {
+        "timestamp": 1791309602,
+        "fundingRatePercentage": "-0.000083"
+      },
+      "rawFundingRatePercentage": "-0.000083",
+      "fundingRatePercentage": -0.000083
+    },
+    {
+      "eventTimeMs": 1791313200000,
+      "availableAtMs": 1791316800000,
+      "raw": {
+        "timestamp": 1791313200,
+        "fundingRatePercentage": "0.000165"
+      },
+      "rawFundingRatePercentage": "0.000165",
+      "fundingRatePercentage": 0.000165
+    },
+    {
+      "eventTimeMs": 1791316800000,
+      "availableAtMs": 1791320400000,
+      "raw": {
+        "timestamp": 1791316800,
+        "fundingRatePercentage": "0.000166"
+      },
+      "rawFundingRatePercentage": "0.000166",
+      "fundingRatePercentage": 0.000166
+    },
+    {
+      "eventTimeMs": 1791320400000,
+      "availableAtMs": 1791324000000,
+      "raw": {
+        "timestamp": 1791320400,
+        "fundingRatePercentage": "0.000496"
+      },
+      "rawFundingRatePercentage": "0.000496",
+      "fundingRatePercentage": 0.000496
+    },
+    {
+      "eventTimeMs": 1791324000000,
+      "availableAtMs": 1791327600000,
+      "raw": {
+        "timestamp": 1791324000,
+        "fundingRatePercentage": "0.000578"
+      },
+      "rawFundingRatePercentage": "0.000578",
+      "fundingRatePercentage": 0.000578
+    },
+    {
+      "eventTimeMs": 1791327601000,
+      "availableAtMs": 1791331201000,
+      "raw": {
+        "timestamp": 1791327601,
+        "fundingRatePercentage": "0.000828"
+      },
+      "rawFundingRatePercentage": "0.000828",
+      "fundingRatePercentage": 0.000828
+    },
+    {
+      "eventTimeMs": 1791331201000,
+      "availableAtMs": 1791334801000,
+      "raw": {
+        "timestamp": 1791331201,
+        "fundingRatePercentage": "0.000580"
+      },
+      "rawFundingRatePercentage": "0.000580",
+      "fundingRatePercentage": 0.00058
+    },
+    {
+      "eventTimeMs": 1791334801000,
+      "availableAtMs": 1791338401000,
+      "raw": {
+        "timestamp": 1791334801,
+        "fundingRatePercentage": "0.000332"
+      },
+      "rawFundingRatePercentage": "0.000332",
+      "fundingRatePercentage": 0.000332
+    },
+    {
+      "eventTimeMs": 1791338400000,
+      "availableAtMs": 1791342000000,
+      "raw": {
+        "timestamp": 1791338400,
+        "fundingRatePercentage": "0.000588"
+      },
+      "rawFundingRatePercentage": "0.000588",
+      "fundingRatePercentage": 0.000588
+    },
+    {
+      "eventTimeMs": 1791342000000,
+      "availableAtMs": 1791345600000,
+      "raw": {
+        "timestamp": 1791342000,
+        "fundingRatePercentage": "0.001690"
+      },
+      "rawFundingRatePercentage": "0.001690",
+      "fundingRatePercentage": 0.00169
+    },
+    {
+      "eventTimeMs": 1791345600000,
+      "availableAtMs": 1791349200000,
+      "raw": {
+        "timestamp": 1791345600,
+        "fundingRatePercentage": "0.002113"
+      },
+      "rawFundingRatePercentage": "0.002113",
+      "fundingRatePercentage": 0.002113
+    },
+    {
+      "eventTimeMs": 1791349200000,
+      "availableAtMs": 1791352800000,
+      "raw": {
+        "timestamp": 1791349200,
+        "fundingRatePercentage": "0.002201"
+      },
+      "rawFundingRatePercentage": "0.002201",
+      "fundingRatePercentage": 0.002201
+    },
+    {
+      "eventTimeMs": 1791352800000,
+      "availableAtMs": 1791356400000,
+      "raw": {
+        "timestamp": 1791352800,
+        "fundingRatePercentage": "0.002522"
+      },
+      "rawFundingRatePercentage": "0.002522",
+      "fundingRatePercentage": 0.002522
+    },
+    {
+      "eventTimeMs": 1791356400000,
+      "availableAtMs": 1791360000000,
+      "raw": {
+        "timestamp": 1791356400,
+        "fundingRatePercentage": "0.002608"
+      },
+      "rawFundingRatePercentage": "0.002608",
+      "fundingRatePercentage": 0.002608
+    },
+    {
+      "eventTimeMs": 1791360000000,
+      "availableAtMs": 1791363600000,
+      "raw": {
+        "timestamp": 1791360000,
+        "fundingRatePercentage": "0.002528"
+      },
+      "rawFundingRatePercentage": "0.002528",
+      "fundingRatePercentage": 0.002528
+    },
+    {
+      "eventTimeMs": 1791363600000,
+      "availableAtMs": 1791367200000,
+      "raw": {
+        "timestamp": 1791363600,
+        "fundingRatePercentage": "0.002451"
+      },
+      "rawFundingRatePercentage": "0.002451",
+      "fundingRatePercentage": 0.002451
+    },
+    {
+      "eventTimeMs": 1791367200000,
+      "availableAtMs": 1791370800000,
+      "raw": {
+        "timestamp": 1791367200,
+        "fundingRatePercentage": "0.002715"
+      },
+      "rawFundingRatePercentage": "0.002715",
+      "fundingRatePercentage": 0.002715
+    },
+    {
+      "eventTimeMs": 1791370800000,
+      "availableAtMs": 1791374400000,
+      "raw": {
+        "timestamp": 1791370800,
+        "fundingRatePercentage": "0.002803"
+      },
+      "rawFundingRatePercentage": "0.002803",
+      "fundingRatePercentage": 0.002803
+    },
+    {
+      "eventTimeMs": 1791374400000,
+      "availableAtMs": 1791378000000,
+      "raw": {
+        "timestamp": 1791374400,
+        "fundingRatePercentage": "0.002980"
+      },
+      "rawFundingRatePercentage": "0.002980",
+      "fundingRatePercentage": 0.00298
+    },
+    {
+      "eventTimeMs": 1791378001000,
+      "availableAtMs": 1791381601000,
+      "raw": {
+        "timestamp": 1791378001,
+        "fundingRatePercentage": "0.003776"
+      },
+      "rawFundingRatePercentage": "0.003776",
+      "fundingRatePercentage": 0.003776
+    },
+    {
+      "eventTimeMs": 1791381600000,
+      "availableAtMs": 1791385200000,
+      "raw": {
+        "timestamp": 1791381600,
+        "fundingRatePercentage": "0.004212"
+      },
+      "rawFundingRatePercentage": "0.004212",
+      "fundingRatePercentage": 0.004212
+    },
+    {
+      "eventTimeMs": 1791385200000,
+      "availableAtMs": 1791388800000,
+      "raw": {
+        "timestamp": 1791385200,
+        "fundingRatePercentage": "0.003880"
+      },
+      "rawFundingRatePercentage": "0.003880",
+      "fundingRatePercentage": 0.00388
+    },
+    {
+      "eventTimeMs": 1791388801000,
+      "availableAtMs": 1791392401000,
+      "raw": {
+        "timestamp": 1791388801,
+        "fundingRatePercentage": "0.004107"
+      },
+      "rawFundingRatePercentage": "0.004107",
+      "fundingRatePercentage": 0.004107
+    },
+    {
+      "eventTimeMs": 1791392400000,
+      "availableAtMs": 1791396000000,
+      "raw": {
+        "timestamp": 1791392400,
+        "fundingRatePercentage": "0.003422"
+      },
+      "rawFundingRatePercentage": "0.003422",
+      "fundingRatePercentage": 0.003422
+    },
+    {
+      "eventTimeMs": 1791396000000,
+      "availableAtMs": 1791399600000,
+      "raw": {
+        "timestamp": 1791396000,
+        "fundingRatePercentage": "0.003263"
+      },
+      "rawFundingRatePercentage": "0.003263",
+      "fundingRatePercentage": 0.003263
+    },
+    {
+      "eventTimeMs": 1791399600000,
+      "availableAtMs": 1791403200000,
+      "raw": {
+        "timestamp": 1791399600,
+        "fundingRatePercentage": "0.003785"
+      },
+      "rawFundingRatePercentage": "0.003785",
+      "fundingRatePercentage": 0.003785
+    },
+    {
+      "eventTimeMs": 1791403201000,
+      "availableAtMs": 1791406801000,
+      "raw": {
+        "timestamp": 1791403201,
+        "fundingRatePercentage": "0.004225"
+      },
+      "rawFundingRatePercentage": "0.004225",
+      "fundingRatePercentage": 0.004225
+    },
+    {
+      "eventTimeMs": 1791406800000,
+      "availableAtMs": 1791410400000,
+      "raw": {
+        "timestamp": 1791406800,
+        "fundingRatePercentage": "0.004041"
+      },
+      "rawFundingRatePercentage": "0.004041",
+      "fundingRatePercentage": 0.004041
+    },
+    {
+      "eventTimeMs": 1791410400000,
+      "availableAtMs": 1791414000000,
+      "raw": {
+        "timestamp": 1791410400,
+        "fundingRatePercentage": "0.003975"
+      },
+      "rawFundingRatePercentage": "0.003975",
+      "fundingRatePercentage": 0.003975
+    },
+    {
+      "eventTimeMs": 1791414000000,
+      "availableAtMs": 1791417600000,
+      "raw": {
+        "timestamp": 1791414000,
+        "fundingRatePercentage": "0.003876"
+      },
+      "rawFundingRatePercentage": "0.003876",
+      "fundingRatePercentage": 0.003876
+    },
+    {
+      "eventTimeMs": 1791417600000,
+      "availableAtMs": 1791421200000,
+      "raw": {
+        "timestamp": 1791417600,
+        "fundingRatePercentage": "0.003866"
+      },
+      "rawFundingRatePercentage": "0.003866",
+      "fundingRatePercentage": 0.003866
+    },
+    {
+      "eventTimeMs": 1791421200000,
+      "availableAtMs": 1791424800000,
+      "raw": {
+        "timestamp": 1791421200,
+        "fundingRatePercentage": "0.003776"
+      },
+      "rawFundingRatePercentage": "0.003776",
+      "fundingRatePercentage": 0.003776
+    },
+    {
+      "eventTimeMs": 1791424801000,
+      "availableAtMs": 1791428401000,
+      "raw": {
+        "timestamp": 1791424801,
+        "fundingRatePercentage": "0.003099"
+      },
+      "rawFundingRatePercentage": "0.003099",
+      "fundingRatePercentage": 0.003099
+    },
+    {
+      "eventTimeMs": 1791428400000,
+      "availableAtMs": 1791432000000,
+      "raw": {
+        "timestamp": 1791428400,
+        "fundingRatePercentage": "0.002916"
+      },
+      "rawFundingRatePercentage": "0.002916",
+      "fundingRatePercentage": 0.002916
+    },
+    {
+      "eventTimeMs": 1791432000000,
+      "availableAtMs": 1791435600000,
+      "raw": {
+        "timestamp": 1791432000,
+        "fundingRatePercentage": "0.002849"
+      },
+      "rawFundingRatePercentage": "0.002849",
+      "fundingRatePercentage": 0.002849
+    },
+    {
+      "eventTimeMs": 1791435600000,
+      "availableAtMs": 1791439200000,
+      "raw": {
+        "timestamp": 1791435600,
+        "fundingRatePercentage": "0.003216"
+      },
+      "rawFundingRatePercentage": "0.003216",
+      "fundingRatePercentage": 0.003216
+    },
+    {
+      "eventTimeMs": 1791439200000,
+      "availableAtMs": 1791442800000,
+      "raw": {
+        "timestamp": 1791439200,
+        "fundingRatePercentage": "0.003913"
+      },
+      "rawFundingRatePercentage": "0.003913",
+      "fundingRatePercentage": 0.003913
+    },
+    {
+      "eventTimeMs": 1791442800000,
+      "availableAtMs": 1791446400000,
+      "raw": {
+        "timestamp": 1791442800,
+        "fundingRatePercentage": "0.003984"
+      },
+      "rawFundingRatePercentage": "0.003984",
+      "fundingRatePercentage": 0.003984
+    },
+    {
+      "eventTimeMs": 1791446400000,
+      "availableAtMs": 1791450000000,
+      "raw": {
+        "timestamp": 1791446400,
+        "fundingRatePercentage": "0.003739"
+      },
+      "rawFundingRatePercentage": "0.003739",
+      "fundingRatePercentage": 0.003739
+    },
+    {
+      "eventTimeMs": 1791450000000,
+      "availableAtMs": 1791453600000,
+      "raw": {
+        "timestamp": 1791450000,
+        "fundingRatePercentage": "0.003043"
+      },
+      "rawFundingRatePercentage": "0.003043",
+      "fundingRatePercentage": 0.003043
+    },
+    {
+      "eventTimeMs": 1791453601000,
+      "availableAtMs": 1791457201000,
+      "raw": {
+        "timestamp": 1791453601,
+        "fundingRatePercentage": "0.003903"
+      },
+      "rawFundingRatePercentage": "0.003903",
+      "fundingRatePercentage": 0.003903
+    },
+    {
+      "eventTimeMs": 1791457201000,
+      "availableAtMs": 1791460801000,
+      "raw": {
+        "timestamp": 1791457201,
+        "fundingRatePercentage": "0.003754"
+      },
+      "rawFundingRatePercentage": "0.003754",
+      "fundingRatePercentage": 0.003754
+    },
+    {
+      "eventTimeMs": 1791460800000,
+      "availableAtMs": 1791464400000,
+      "raw": {
+        "timestamp": 1791460800,
+        "fundingRatePercentage": "0.004061"
+      },
+      "rawFundingRatePercentage": "0.004061",
+      "fundingRatePercentage": 0.004061
+    },
+    {
+      "eventTimeMs": 1791464400000,
+      "availableAtMs": 1791468000000,
+      "raw": {
+        "timestamp": 1791464400,
+        "fundingRatePercentage": "0.004173"
+      },
+      "rawFundingRatePercentage": "0.004173",
+      "fundingRatePercentage": 0.004173
+    },
+    {
+      "eventTimeMs": 1791468000000,
+      "availableAtMs": 1791471600000,
+      "raw": {
+        "timestamp": 1791468000,
+        "fundingRatePercentage": "0.004360"
+      },
+      "rawFundingRatePercentage": "0.004360",
+      "fundingRatePercentage": 0.00436
+    },
+    {
+      "eventTimeMs": 1791471600000,
+      "availableAtMs": 1791475200000,
+      "raw": {
+        "timestamp": 1791471600,
+        "fundingRatePercentage": "0.003641"
+      },
+      "rawFundingRatePercentage": "0.003641",
+      "fundingRatePercentage": 0.003641
+    }
+  ],
+  "rawSource": {
+    "marketId": 1,
+    "symbol": "SOL",
+    "rates": [
+      {
+        "timestamp": 1790870400,
+        "fundingRatePercentage": "0.003745"
+      },
+      {
+        "timestamp": 1790874000,
+        "fundingRatePercentage": "0.003838"
+      },
+      {
+        "timestamp": 1790877600,
+        "fundingRatePercentage": "0.004305"
+      },
+      {
+        "timestamp": 1790881201,
+        "fundingRatePercentage": "0.003208"
+      },
+      {
+        "timestamp": 1790884800,
+        "fundingRatePercentage": "0.002536"
+      },
+      {
+        "timestamp": 1790888400,
+        "fundingRatePercentage": "0.002453"
+      },
+      {
+        "timestamp": 1790892000,
+        "fundingRatePercentage": "0.002039"
+      },
+      {
+        "timestamp": 1790895601,
+        "fundingRatePercentage": "0.001774"
+      },
+      {
+        "timestamp": 1790899200,
+        "fundingRatePercentage": "0.001435"
+      },
+      {
+        "timestamp": 1790902800,
+        "fundingRatePercentage": "0.001597"
+      },
+      {
+        "timestamp": 1790906400,
+        "fundingRatePercentage": "0.001924"
+      },
+      {
+        "timestamp": 1790910001,
+        "fundingRatePercentage": "0.002081"
+      },
+      {
+        "timestamp": 1790913600,
+        "fundingRatePercentage": "0.001072"
+      },
+      {
+        "timestamp": 1790917200,
+        "fundingRatePercentage": "0.000000"
+      },
+      {
+        "timestamp": 1790920800,
+        "fundingRatePercentage": "-0.000082"
+      },
+      {
+        "timestamp": 1790924400,
+        "fundingRatePercentage": "0.000164"
+      },
+      {
+        "timestamp": 1790928000,
+        "fundingRatePercentage": "0.001725"
+      },
+      {
+        "timestamp": 1790931600,
+        "fundingRatePercentage": "0.000901"
+      },
+      {
+        "timestamp": 1790935200,
+        "fundingRatePercentage": "0.000164"
+      },
+      {
+        "timestamp": 1790938800,
+        "fundingRatePercentage": "0.000656"
+      },
+      {
+        "timestamp": 1790942400,
+        "fundingRatePercentage": "0.001313"
+      },
+      {
+        "timestamp": 1790946000,
+        "fundingRatePercentage": "0.001143"
+      },
+      {
+        "timestamp": 1790949600,
+        "fundingRatePercentage": "-0.000491"
+      },
+      {
+        "timestamp": 1790953201,
+        "fundingRatePercentage": "0.001078"
+      },
+      {
+        "timestamp": 1790956801,
+        "fundingRatePercentage": "-0.001417"
+      },
+      {
+        "timestamp": 1790960401,
+        "fundingRatePercentage": "-0.001334"
+      },
+      {
+        "timestamp": 1790964000,
+        "fundingRatePercentage": "-0.001086"
+      },
+      {
+        "timestamp": 1790967600,
+        "fundingRatePercentage": "-0.000169"
+      },
+      {
+        "timestamp": 1790971200,
+        "fundingRatePercentage": "0.000593"
+      },
+      {
+        "timestamp": 1790974800,
+        "fundingRatePercentage": "0.000679"
+      },
+      {
+        "timestamp": 1790978400,
+        "fundingRatePercentage": "0.000592"
+      },
+      {
+        "timestamp": 1790982000,
+        "fundingRatePercentage": "0.000590"
+      },
+      {
+        "timestamp": 1790985600,
+        "fundingRatePercentage": "0.000674"
+      },
+      {
+        "timestamp": 1790989200,
+        "fundingRatePercentage": "0.001176"
+      },
+      {
+        "timestamp": 1790992800,
+        "fundingRatePercentage": "0.000923"
+      },
+      {
+        "timestamp": 1790996400,
+        "fundingRatePercentage": "0.000673"
+      },
+      {
+        "timestamp": 1791000000,
+        "fundingRatePercentage": "0.001089"
+      },
+      {
+        "timestamp": 1791003600,
+        "fundingRatePercentage": "0.001174"
+      },
+      {
+        "timestamp": 1791007201,
+        "fundingRatePercentage": "0.001421"
+      },
+      {
+        "timestamp": 1791010800,
+        "fundingRatePercentage": "0.001339"
+      },
+      {
+        "timestamp": 1791014400,
+        "fundingRatePercentage": "0.001173"
+      },
+      {
+        "timestamp": 1791018000,
+        "fundingRatePercentage": "0.001173"
+      },
+      {
+        "timestamp": 1791021600,
+        "fundingRatePercentage": "0.001089"
+      },
+      {
+        "timestamp": 1791025200,
+        "fundingRatePercentage": "0.001255"
+      },
+      {
+        "timestamp": 1791028800,
+        "fundingRatePercentage": "0.001089"
+      },
+      {
+        "timestamp": 1791032401,
+        "fundingRatePercentage": "0.001004"
+      },
+      {
+        "timestamp": 1791036000,
+        "fundingRatePercentage": "0.000837"
+      },
+      {
+        "timestamp": 1791039600,
+        "fundingRatePercentage": "0.000918"
+      },
+      {
+        "timestamp": 1791043200,
+        "fundingRatePercentage": "0.000585"
+      },
+      {
+        "timestamp": 1791046800,
+        "fundingRatePercentage": "0.000668"
+      },
+      {
+        "timestamp": 1791050400,
+        "fundingRatePercentage": "0.000750"
+      },
+      {
+        "timestamp": 1791054000,
+        "fundingRatePercentage": "0.000917"
+      },
+      {
+        "timestamp": 1791057600,
+        "fundingRatePercentage": "0.000668"
+      },
+      {
+        "timestamp": 1791061200,
+        "fundingRatePercentage": "0.000918"
+      },
+      {
+        "timestamp": 1791064800,
+        "fundingRatePercentage": "0.000501"
+      },
+      {
+        "timestamp": 1791068400,
+        "fundingRatePercentage": "0.000919"
+      },
+      {
+        "timestamp": 1791072000,
+        "fundingRatePercentage": "0.000669"
+      },
+      {
+        "timestamp": 1791075601,
+        "fundingRatePercentage": "0.000915"
+      },
+      {
+        "timestamp": 1791079200,
+        "fundingRatePercentage": "0.000915"
+      },
+      {
+        "timestamp": 1791082800,
+        "fundingRatePercentage": "0.000830"
+      },
+      {
+        "timestamp": 1791086400,
+        "fundingRatePercentage": "0.001159"
+      },
+      {
+        "timestamp": 1791090000,
+        "fundingRatePercentage": "0.001326"
+      },
+      {
+        "timestamp": 1791093600,
+        "fundingRatePercentage": "0.001489"
+      },
+      {
+        "timestamp": 1791097200,
+        "fundingRatePercentage": "0.001240"
+      },
+      {
+        "timestamp": 1791100800,
+        "fundingRatePercentage": "0.001403"
+      },
+      {
+        "timestamp": 1791104400,
+        "fundingRatePercentage": "0.001487"
+      },
+      {
+        "timestamp": 1791108000,
+        "fundingRatePercentage": "0.001731"
+      },
+      {
+        "timestamp": 1791111600,
+        "fundingRatePercentage": "0.001154"
+      },
+      {
+        "timestamp": 1791115200,
+        "fundingRatePercentage": "0.000000"
+      },
+      {
+        "timestamp": 1791118800,
+        "fundingRatePercentage": "-0.000660"
+      },
+      {
+        "timestamp": 1791122400,
+        "fundingRatePercentage": "-0.000740"
+      },
+      {
+        "timestamp": 1791126000,
+        "fundingRatePercentage": "-0.001313"
+      },
+      {
+        "timestamp": 1791129601,
+        "fundingRatePercentage": "-0.001646"
+      },
+      {
+        "timestamp": 1791133200,
+        "fundingRatePercentage": "-0.001972"
+      },
+      {
+        "timestamp": 1791136800,
+        "fundingRatePercentage": "-0.002553"
+      },
+      {
+        "timestamp": 1791140400,
+        "fundingRatePercentage": "0.000082"
+      },
+      {
+        "timestamp": 1791144000,
+        "fundingRatePercentage": "-0.000991"
+      },
+      {
+        "timestamp": 1791147600,
+        "fundingRatePercentage": "0.002143"
+      },
+      {
+        "timestamp": 1791151200,
+        "fundingRatePercentage": "0.001897"
+      },
+      {
+        "timestamp": 1791154800,
+        "fundingRatePercentage": "0.002053"
+      },
+      {
+        "timestamp": 1791158400,
+        "fundingRatePercentage": "0.002138"
+      },
+      {
+        "timestamp": 1791162000,
+        "fundingRatePercentage": "0.001895"
+      },
+      {
+        "timestamp": 1791165600,
+        "fundingRatePercentage": "0.001650"
+      },
+      {
+        "timestamp": 1791169201,
+        "fundingRatePercentage": "0.001650"
+      },
+      {
+        "timestamp": 1791172800,
+        "fundingRatePercentage": "0.001494"
+      },
+      {
+        "timestamp": 1791176400,
+        "fundingRatePercentage": "0.001493"
+      },
+      {
+        "timestamp": 1791180000,
+        "fundingRatePercentage": "0.001162"
+      },
+      {
+        "timestamp": 1791183601,
+        "fundingRatePercentage": "0.001398"
+      },
+      {
+        "timestamp": 1791187200,
+        "fundingRatePercentage": "0.001643"
+      },
+      {
+        "timestamp": 1791190800,
+        "fundingRatePercentage": "0.001651"
+      },
+      {
+        "timestamp": 1791194400,
+        "fundingRatePercentage": "0.001326"
+      },
+      {
+        "timestamp": 1791198000,
+        "fundingRatePercentage": "0.001243"
+      },
+      {
+        "timestamp": 1791201600,
+        "fundingRatePercentage": "0.000827"
+      },
+      {
+        "timestamp": 1791205200,
+        "fundingRatePercentage": "0.000748"
+      },
+      {
+        "timestamp": 1791208800,
+        "fundingRatePercentage": "0.001407"
+      },
+      {
+        "timestamp": 1791212401,
+        "fundingRatePercentage": "0.001589"
+      },
+      {
+        "timestamp": 1791216001,
+        "fundingRatePercentage": "0.001424"
+      },
+      {
+        "timestamp": 1791219600,
+        "fundingRatePercentage": "0.001170"
+      },
+      {
+        "timestamp": 1791223201,
+        "fundingRatePercentage": "0.001166"
+      },
+      {
+        "timestamp": 1791226801,
+        "fundingRatePercentage": "0.001249"
+      },
+      {
+        "timestamp": 1791230400,
+        "fundingRatePercentage": "0.001247"
+      },
+      {
+        "timestamp": 1791234000,
+        "fundingRatePercentage": "0.001160"
+      },
+      {
+        "timestamp": 1791237600,
+        "fundingRatePercentage": "0.000828"
+      },
+      {
+        "timestamp": 1791241200,
+        "fundingRatePercentage": "0.000991"
+      },
+      {
+        "timestamp": 1791244800,
+        "fundingRatePercentage": "0.000662"
+      },
+      {
+        "timestamp": 1791248401,
+        "fundingRatePercentage": "0.000743"
+      },
+      {
+        "timestamp": 1791252000,
+        "fundingRatePercentage": "0.000829"
+      },
+      {
+        "timestamp": 1791255600,
+        "fundingRatePercentage": "0.000665"
+      },
+      {
+        "timestamp": 1791259200,
+        "fundingRatePercentage": "0.000583"
+      },
+      {
+        "timestamp": 1791262800,
+        "fundingRatePercentage": "0.000583"
+      },
+      {
+        "timestamp": 1791266401,
+        "fundingRatePercentage": "0.000501"
+      },
+      {
+        "timestamp": 1791270000,
+        "fundingRatePercentage": "0.001335"
+      },
+      {
+        "timestamp": 1791273600,
+        "fundingRatePercentage": "0.001663"
+      },
+      {
+        "timestamp": 1791277200,
+        "fundingRatePercentage": "0.001825"
+      },
+      {
+        "timestamp": 1791280800,
+        "fundingRatePercentage": "0.001756"
+      },
+      {
+        "timestamp": 1791284400,
+        "fundingRatePercentage": "0.002244"
+      },
+      {
+        "timestamp": 1791288000,
+        "fundingRatePercentage": "0.002409"
+      },
+      {
+        "timestamp": 1791291600,
+        "fundingRatePercentage": "0.001662"
+      },
+      {
+        "timestamp": 1791295200,
+        "fundingRatePercentage": "0.000165"
+      },
+      {
+        "timestamp": 1791298800,
+        "fundingRatePercentage": "0.000493"
+      },
+      {
+        "timestamp": 1791302400,
+        "fundingRatePercentage": "-0.000747"
+      },
+      {
+        "timestamp": 1791306000,
+        "fundingRatePercentage": "-0.000083"
+      },
+      {
+        "timestamp": 1791309602,
+        "fundingRatePercentage": "-0.000083"
+      },
+      {
+        "timestamp": 1791313200,
+        "fundingRatePercentage": "0.000165"
+      },
+      {
+        "timestamp": 1791316800,
+        "fundingRatePercentage": "0.000166"
+      },
+      {
+        "timestamp": 1791320400,
+        "fundingRatePercentage": "0.000496"
+      },
+      {
+        "timestamp": 1791324000,
+        "fundingRatePercentage": "0.000578"
+      },
+      {
+        "timestamp": 1791327601,
+        "fundingRatePercentage": "0.000828"
+      },
+      {
+        "timestamp": 1791331201,
+        "fundingRatePercentage": "0.000580"
+      },
+      {
+        "timestamp": 1791334801,
+        "fundingRatePercentage": "0.000332"
+      },
+      {
+        "timestamp": 1791338400,
+        "fundingRatePercentage": "0.000588"
+      },
+      {
+        "timestamp": 1791342000,
+        "fundingRatePercentage": "0.001690"
+      },
+      {
+        "timestamp": 1791345600,
+        "fundingRatePercentage": "0.002113"
+      },
+      {
+        "timestamp": 1791349200,
+        "fundingRatePercentage": "0.002201"
+      },
+      {
+        "timestamp": 1791352800,
+        "fundingRatePercentage": "0.002522"
+      },
+      {
+        "timestamp": 1791356400,
+        "fundingRatePercentage": "0.002608"
+      },
+      {
+        "timestamp": 1791360000,
+        "fundingRatePercentage": "0.002528"
+      },
+      {
+        "timestamp": 1791363600,
+        "fundingRatePercentage": "0.002451"
+      },
+      {
+        "timestamp": 1791367200,
+        "fundingRatePercentage": "0.002715"
+      },
+      {
+        "timestamp": 1791370800,
+        "fundingRatePercentage": "0.002803"
+      },
+      {
+        "timestamp": 1791374400,
+        "fundingRatePercentage": "0.002980"
+      },
+      {
+        "timestamp": 1791378001,
+        "fundingRatePercentage": "0.003776"
+      },
+      {
+        "timestamp": 1791381600,
+        "fundingRatePercentage": "0.004212"
+      },
+      {
+        "timestamp": 1791385200,
+        "fundingRatePercentage": "0.003880"
+      },
+      {
+        "timestamp": 1791388801,
+        "fundingRatePercentage": "0.004107"
+      },
+      {
+        "timestamp": 1791392400,
+        "fundingRatePercentage": "0.003422"
+      },
+      {
+        "timestamp": 1791396000,
+        "fundingRatePercentage": "0.003263"
+      },
+      {
+        "timestamp": 1791399600,
+        "fundingRatePercentage": "0.003785"
+      },
+      {
+        "timestamp": 1791403201,
+        "fundingRatePercentage": "0.004225"
+      },
+      {
+        "timestamp": 1791406800,
+        "fundingRatePercentage": "0.004041"
+      },
+      {
+        "timestamp": 1791410400,
+        "fundingRatePercentage": "0.003975"
+      },
+      {
+        "timestamp": 1791414000,
+        "fundingRatePercentage": "0.003876"
+      },
+      {
+        "timestamp": 1791417600,
+        "fundingRatePercentage": "0.003866"
+      },
+      {
+        "timestamp": 1791421200,
+        "fundingRatePercentage": "0.003776"
+      },
+      {
+        "timestamp": 1791424801,
+        "fundingRatePercentage": "0.003099"
+      },
+      {
+        "timestamp": 1791428400,
+        "fundingRatePercentage": "0.002916"
+      },
+      {
+        "timestamp": 1791432000,
+        "fundingRatePercentage": "0.002849"
+      },
+      {
+        "timestamp": 1791435600,
+        "fundingRatePercentage": "0.003216"
+      },
+      {
+        "timestamp": 1791439200,
+        "fundingRatePercentage": "0.003913"
+      },
+      {
+        "timestamp": 1791442800,
+        "fundingRatePercentage": "0.003984"
+      },
+      {
+        "timestamp": 1791446400,
+        "fundingRatePercentage": "0.003739"
+      },
+      {
+        "timestamp": 1791450000,
+        "fundingRatePercentage": "0.003043"
+      },
+      {
+        "timestamp": 1791453601,
+        "fundingRatePercentage": "0.003903"
+      },
+      {
+        "timestamp": 1791457201,
+        "fundingRatePercentage": "0.003754"
+      },
+      {
+        "timestamp": 1791460800,
+        "fundingRatePercentage": "0.004061"
+      },
+      {
+        "timestamp": 1791464400,
+        "fundingRatePercentage": "0.004173"
+      },
+      {
+        "timestamp": 1791468000,
+        "fundingRatePercentage": "0.004360"
+      },
+      {
+        "timestamp": 1791471600,
+        "fundingRatePercentage": "0.003641"
+      }
+    ]
+  }
+}

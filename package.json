@@ -1,14 +1,27 @@
 {
   "name": "phoenix-replay-kit",
   "version": "1.0.0",
-  "description": "Offline historical strategy regression data foundation for Phoenix perpetuals",
+  "description": "Offline deterministic Phoenix strategy regression testing",
   "scripts": {
+    "pretypecheck": "npm run prepare:data --workspace apps/web",
     "typecheck": "tsc --noEmit",
-    "build": "npm run typecheck",
+    "build": "node scripts/build.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "fetch:candles": "node --import tsx scripts/fetch-candles.ts",
-    "validate:candles": "node --import tsx scripts/validate-candles.ts"
+    "validate:candles": "node --import tsx scripts/validate-candles.ts",
+    "demo:rsi": "node --import tsx scripts/demo-rsi.ts",
+    "phoenix": "node --import tsx src/cli.ts",
+    "convert:inspection": "node --import tsx scripts/convert-inspection.ts",
+    "prepack": "npm run build",
+    "web:dev": "npm run dev --workspace apps/web",
+    "web:build": "npm run build --workspace apps/web",
+    "web:start": "npm run start --workspace apps/web",
+    "web:typecheck": "npm run typecheck --workspace apps/web",
+    "pretest": "npm run prepare:data --workspace apps/web",
+    "web:test:browser": "npm exec --workspace apps/web -- playwright test",
+    "web:check:production": "npm run check:production --workspace apps/web",
+    "check:phoenix": "node --import tsx scripts/check-phoenix-integration.ts"
   },
   "repository": {
     "type": "git",
@@ -23,12 +36,44 @@
   },
   "homepage": "https://github.com/anusha-saxena/phoenix-replay-kit#readme",
   "dependencies": {
-    "@ellipsis-labs/rise": "^0.5.38"
+    "@ellipsis-labs/rise": "^0.5.38",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@types/node": "^26.6.4",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.0.3"
-  }
+  },
+  "bin": {
+    "phoenix-replay": "dist/src/cli.js"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "engines": {
+    "node": "^22.18.0 || ^24.0.0 || ^26.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "CLI.md",
+    "REPLAY.md",
+    "LICENSE",
+    "docs/architecture.md",
+    "docs/data-formats.md",
+    "docs/strategy-api.md",
+    "docs/replay-timing.md",
+    "docs/release-checklist.md",
+    "examples/",
+    "docs/DEVELOPER_WORKSPACE.md"
+  ],
+  "workspaces": [
+    "apps/web"
+  ]
 }
