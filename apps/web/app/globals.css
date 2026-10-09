@@ -1032,3 +1032,47 @@ footer div {
     transition: none;
   }
 }
+
+/* Hover feedback and descriptions above the main actions. */
+button:not(:disabled):hover,
+.workspace button:not(:disabled):hover,
+a.button:hover,
+summary:hover {
+  background-color: #f1f1f1;
+}
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: max-content;
+  max-width: min(240px, calc(100vw - 32px));
+  padding: 7px 11px;
+  border-radius: 6px;
+  background: #171717;
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+[data-tooltip]:not(:disabled):hover::after,
+[data-tooltip]:not(:disabled):focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Header links need room below them to keep tooltips inside the page. */
+header [data-tooltip]::after {
+  top: calc(100% + 8px);
+  bottom: auto;
+}

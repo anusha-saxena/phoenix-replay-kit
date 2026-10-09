@@ -117,7 +117,7 @@ export default function Studio() {
           </a>
           <nav aria-label="Main navigation">
             <a href="#demo">Demo</a>
-            <a href="/workspace">Developer Workspace</a>
+            <a href="/workspace" data-tooltip="Open custom datasets and strategies">Developer Workspace</a>
             <a href={github} target="_blank" rel="noreferrer">
               GitHub ↗
             </a>
@@ -232,6 +232,7 @@ export default function Studio() {
             <div className="actions run-actions">
               <button
                 className="button primary"
+                data-tooltip="Replay both strategies and compare their decisions"
                 type="submit"
                 disabled={busy || !demo}
               >
@@ -239,6 +240,7 @@ export default function Studio() {
               </button>
               <button
                 className="text-button"
+                data-tooltip="Copy original settings to the updated strategy"
                 type="button"
                 disabled={busy}
                 onClick={() =>
@@ -249,6 +251,7 @@ export default function Studio() {
               </button>
               <button
                 className="text-button"
+                data-tooltip="Restore the example strategy settings"
                 type="button"
                 disabled={busy}
                 onClick={() => setConfigs(structuredClone(example))}
@@ -308,7 +311,7 @@ export default function Studio() {
                     )}
                   </h2>
                 </div>
-                <button className="button" onClick={download}>
+                <button className="button" data-tooltip="Save the comparison report as JSON" onClick={download}>
                   Download JSON
                 </button>
               </div>
@@ -563,6 +566,7 @@ export default function Studio() {
               </p>
               <button
                 className="button"
+                data-tooltip="Copy the CLI command to your clipboard"
                 onClick={async () => {
                   try {
                     await navigator.clipboard.writeText(cli);
