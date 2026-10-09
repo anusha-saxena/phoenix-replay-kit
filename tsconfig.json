@@ -19,6 +19,7 @@
     "src/**/*.ts",
     "strategies/**/*.ts",
     "tests/**/*.ts",
-    "scripts/**/*.ts"
+    "scripts/**/*.ts",
+    "examples/**/*.ts"
   ]
 }
