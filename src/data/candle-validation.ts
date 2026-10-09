@@ -4,25 +4,25 @@ export function record(value: unknown, name: string): Record<string, unknown> {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {
     throw new Error(`${name} must be an object`);
   }
+
   return value as Record<string, unknown>;
 }
 
 export function integer(value: unknown, name: string, min = 0): number {
-  if (
-    typeof value !== 'number' ||
-    !Number.isSafeInteger(value) ||
-    value < min ||
-    value > 8.64e15
-  ) {
+  if (typeof value !== 'number' || !Number.isSafeInteger(value) || value < min || value > 8.64e15) {
     throw new Error(`${name} must be a safe integer >= ${min}`);
   }
+
   return value;
 }
 
 export function parseTimeframe(value: string): number {
   const match = /^([1-9]\d*)([mhd])$/.exec(value);
+
   if (!match) {
-    throw new Error(`Invalid timeframe ${value}: use positive minute/hour/day notation, e.g. 5m, 1h, 1d (server support varies)`);
+    throw new Error(
+      `Invalid timeframe ${value}: use positive minute/hour/day notation, e.g. 5m, 1h, 1d (server support varies)`,
+    );
   }
 
   const units: Record<string, number> = {
@@ -31,14 +31,14 @@ export function parseTimeframe(value: string): number {
     d: 86400000,
   };
   const durationMs = Number(match[1]) * units[match[2]!]!;
+
   return integer(durationMs, 'timeframeMs', 1);
 }
 
 export function validateWindow(window: CandleWindow): number {
-  if (!/^[A-Z0-9][A-Z0-9_-]*$/.test(window.symbol)) {
-    throw new Error('symbol must be an uppercase market identifier');
+  if (!/^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(window.symbol)) {
+    throw new Error('symbol must be a canonical market identifier');
   }
-
   integer(window.requestedFromMs, 'requestedFromMs');
   integer(window.requestedToMs, 'requestedToMs');
   if (window.requestedFromMs >= window.requestedToMs) {
@@ -58,25 +58,24 @@ export function validateCandle(value: unknown, label: string, step: number): Can
     throw new Error(`${label}.isFinal must be boolean`);
   }
 
-  // Check both the trade prices and mark prices.
   for (const prefix of ['', 'mark']) {
     const keys = prefix
       ? ['markOpen', 'markHigh', 'markLow', 'markClose']
       : ['open', 'high', 'low', 'close'];
 
     for (const key of keys) {
-      if (
-        typeof bar[key] !== 'number' ||
-        !Number.isFinite(bar[key]) ||
-        (bar[key] as number) <= 0
-      ) {
+      if (typeof bar[key] !== 'number' || !Number.isFinite(bar[key]) || (bar[key] as number) <= 0) {
         throw new Error(`${label}.${key} must be a finite positive price`);
       }
     }
 
-    const [open, high, low, close] = keys.map(key => bar[key] as number) as [
-      number, number, number, number,
+    const [open, high, low, close] = keys.map((key) => bar[key] as number) as [
+      number,
+      number,
+      number,
+      number,
     ];
+
     if (low > high || open < low || open > high || close < low || close > high) {
       throw new Error(`${label}: incoherent ${prefix || 'trade'} OHLC`);
     }
@@ -101,11 +100,22 @@ export function validateCandle(value: unknown, label: string, step: number): Can
   }
 
   const allowed = new Set([
-    'time', 'isFinal',
-    'open', 'high', 'low', 'close',
-    'markOpen', 'markHigh', 'markLow', 'markClose',
-    'volume', 'volumeQuote', 'tradeCount', 'externalSource',
+    'time',
+    'isFinal',
+    'open',
+    'high',
+    'low',
+    'close',
+    'markOpen',
+    'markHigh',
+    'markLow',
+    'markClose',
+    'volume',
+    'volumeQuote',
+    'tradeCount',
+    'externalSource',
   ]);
+
   for (const key of Object.keys(bar)) {
     if (!allowed.has(key)) {
       throw new Error(`${label}: unexpected candle field ${key}`);
@@ -122,22 +132,20 @@ export function analyzeCoverage(
 ): Coverage {
   const step = validateWindow(window);
   integer(cutoff, 'evaluationCutoffMs');
-
   const first = Math.ceil(window.requestedFromMs / step) * step;
-  const end = Math.max(
-    first,
-    Math.floor(Math.min(cutoff, window.requestedToMs) / step) * step,
-  );
+  const end = Math.max(first, Math.floor(Math.min(cutoff, window.requestedToMs) / step) * step);
   const expectedBars = (end - first) / step;
   const internalGaps: Coverage['internalGaps'] = [];
 
   for (let i = 0; i < bars.length; i++) {
     const bar = bars[i]!;
+
     if (!bar.isFinal || bar.time < first || bar.time + step > end || bar.time % step) {
       throw new Error(`bar ${i} is non-final or outside fully closed requested buckets`);
     }
 
     const previousBar = bars[i - 1];
+
     if (previousBar && bar.time <= previousBar.time) {
       throw new Error(`bar ${i}: duplicate or out-of-order timestamp`);
     }
@@ -168,11 +176,7 @@ export function analyzeCoverage(
   };
 }
 
-export function normalizeCandles(
-  values: readonly unknown[],
-  window: CandleWindow,
-  cutoff: number,
-) {
+export function normalizeCandles(values: readonly unknown[], window: CandleWindow, cutoff: number) {
   const step = validateWindow(window);
   let excludedNonFinal = 0;
   let excludedAfterCutoff = 0;
@@ -183,11 +187,11 @@ export function normalizeCandles(
 
   for (let i = 0; i < values.length; i++) {
     const bar = validateCandle(values[i], `bars[${i}]`, step);
+
     if (previous !== undefined && bar.time < previous) {
       outOfOrder++;
     }
     previous = bar.time;
-
     if (bar.time < window.requestedFromMs || bar.time >= window.requestedToMs) {
       throw new Error(`bars[${i}] outside requested window`);
     }
@@ -199,20 +203,20 @@ export function normalizeCandles(
       excludedAfterCutoff++;
       continue;
     }
-
     valid.push(bar);
   }
-
   valid.sort((a, b) => a.time - b.time);
   const bars: Candle[] = [];
+
   for (const bar of valid) {
     const previousBar = bars.at(-1);
+
     if (previousBar?.time === bar.time) {
       const keys = new Set([...Object.keys(previousBar), ...Object.keys(bar)]);
-      const conflicting = [...keys].some(key =>
-        (previousBar as unknown as Record<string, unknown>)[key] !==
-        (bar as unknown as Record<string, unknown>)[key],
+      const conflicting = [...keys].some(
+        (key) => previousBar[key as keyof Candle] !== bar[key as keyof Candle],
       );
+
       if (conflicting) {
         throw new Error(`Conflicting duplicate timestamp ${bar.time}`);
       }

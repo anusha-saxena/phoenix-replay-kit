@@ -1,7 +1,13 @@
 import { readFile } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import type { CandleFixture, CandleWindow } from './types.js';
-import { analyzeCoverage, integer, record, validateCandle, validateWindow } from './candle-validation.js';
+import {
+  analyzeCoverage,
+  integer,
+  record,
+  validateCandle,
+  validateWindow,
+} from './candle-validation.js';
 
 export function validateCandleFixture(value: unknown): CandleFixture {
   const root = record(value, 'fixture');
@@ -29,6 +35,7 @@ export function validateCandleFixture(value: unknown): CandleFixture {
     requestedToMs: integer(meta.requestedToMs, 'requestedToMs'),
   };
   const step = validateWindow(window);
+
   if (meta.timeframeMs !== step) {
     throw new Error('timeframe/timeframeMs mismatch');
   }
@@ -37,20 +44,23 @@ export function validateCandleFixture(value: unknown): CandleFixture {
   const cutoff = legacy
     ? Math.min(fetchedAtMs, window.requestedToMs)
     : integer(meta.evaluationCutoffMs, 'evaluationCutoffMs');
+
   if (cutoff > Math.min(fetchedAtMs, window.requestedToMs)) {
     throw new Error('evaluationCutoffMs exceeds requested end or fetch time');
   }
 
   const pageCount = integer(meta.pageCount, 'pageCount', 1);
+
   if (!Array.isArray(root.bars) || !root.bars.length) {
     throw new Error('bars must be a nonempty array');
   }
+
   const bars = root.bars.map((bar, i) => validateCandle(bar, `bars[${i}]`, step));
+
   if (integer(meta.barCount, 'barCount') !== bars.length) {
     throw new Error('barCount mismatch');
   }
 
-  // Check the saved coverage against the actual bars.
   const coverage = analyzeCoverage(bars, window, cutoff);
   const original = record(meta.integrity, 'meta.integrity');
   const integrity = {
@@ -86,13 +96,12 @@ export function validateCandleFixture(value: unknown): CandleFixture {
     throw new Error('Invalid SDK/API provenance');
   }
 
-  let legacyMetadata: Pick<CandleFixture['meta'], 'legacyOriginalMeta'> = {};
+  let legacyOriginalMeta: Record<string, unknown> | undefined;
+
   if (legacy) {
-    legacyMetadata = { legacyOriginalMeta: meta };
-  } else if (meta.legacyOriginalMeta) {
-    legacyMetadata = {
-      legacyOriginalMeta: record(meta.legacyOriginalMeta, 'legacyOriginalMeta'),
-    };
+    legacyOriginalMeta = meta;
+  } else if (meta.legacyOriginalMeta !== undefined) {
+    legacyOriginalMeta = record(meta.legacyOriginalMeta, 'legacyOriginalMeta');
   }
 
   return {
@@ -102,8 +111,8 @@ export function validateCandleFixture(value: unknown): CandleFixture {
       source: 'phoenix_rise_http',
       method: 'candles.getCandlesV2',
       sdkPackage: '@ellipsis-labs/rise',
-      sdkVersion: legacy ? 'unknown (legacy)' : meta.sdkVersion as string,
-      apiUrl: legacy ? 'https://perp-api.phoenix.trade' : meta.apiUrl as string,
+      sdkVersion: legacy ? 'unknown (legacy)' : (meta.sdkVersion as string),
+      apiUrl: legacy ? 'https://perp-api.phoenix.trade' : (meta.apiUrl as string),
       timeframeMs: step,
       timeUnit: 'ms',
       fetchedAtMs,
@@ -111,19 +120,21 @@ export function validateCandleFixture(value: unknown): CandleFixture {
       barCount: bars.length,
       pageCount,
       integrity,
-      ...legacyMetadata,
+      ...(legacyOriginalMeta ? { legacyOriginalMeta } : {}),
     },
     bars,
   };
 }
-
 export async function loadCandleFixture(filePath: string): Promise<CandleFixture> {
   try {
     const content = await readFile(filePath, 'utf8');
+
     return validateCandleFixture(JSON.parse(content) as unknown);
   } catch (error) {
     throw new Error(
-      `Cannot load candle fixture ${filePath}: ${error instanceof Error ? error.message : String(error)}`,
+      `Cannot load candle fixture ${filePath}: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
       { cause: error },
     );
   }

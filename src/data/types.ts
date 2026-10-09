@@ -9,8 +9,6 @@ export interface CandleWindow {
   requestedToMs: number;
 }
 
-// candle schema based on data!!!
-
 export interface Coverage {
   expectedFirstStartMs: number;
   expectedEndExclusiveMs: number;
