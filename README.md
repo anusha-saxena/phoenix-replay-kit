@@ -1,57 +1,172 @@
 # Phoenix Replay Kit
 
-Independent, unofficial developer tool for repeatable, offline historical strategy
-regression testing on Phoenix perpetuals using `@ellipsis-labs/rise`.
-**In development:** Stage 1 implements candle collection, validation and offline
-loading. Strategy replay and BUY/SELL/HOLD comparison come later. This compares
-strategy intentions; it does not execute trades or simulate fills or P&L.
-No wallet, private keys or trading credentials are required.
+**Change your strategy. Replay the same market data. See which decisions changed.**
 
-Run from this directory (not the parent workspace):
+A TypeScript library, CLI, and interactive web app for **deterministic trading-strategy replay and regression testing**, built using historical market data collected through the Ellipsis Labs Phoenix Rise SDK.
+
+Run an original and updated strategy against the same saved market data, compare their BUY / SELL / HOLD decisions, and inspect exactly where their behavior differs.
+
+**[Try the live demo](https://phoenix-replay-kit.vercel.app)** · **[Developer Workspace](https://phoenix-replay-kit.vercel.app/workspace)**
+
+## Why this exists
+
+Small changes to a trading strategy can cause unexpected changes in its decisions. Reviewing the code alone doesn't always reveal where those differences occur.
+
+Phoenix Replay Kit makes those changes reproducible and inspectable by running both strategy versions against identical historical inputs.
+
+For example, changing an RSI buy threshold from **30 to 25** produces **24 changed decisions across 1,883 SOL-PERP candle events** in the included dataset.
+
+You can inspect each disagreement, see the indicator values behind it, and use comparison thresholds to detect regressions in CI.
+
+## Try it locally
+
+**Requirements:** Node.js 22.18+, 24, or 26 (supported versions).
+
+From the `phoenix-replay-kit/` directory:
 
 ```bash
 npm ci
-npm run typecheck
-npm test
-npm run validate:candles -- data/fixtures/candles/sol-5m-1790869255065-1791474055065.json
-npm run fetch:candles -- --symbol SOL --timeframe 5m --hours 24
+npm run web:dev
 ```
 
-Explicit, repeatable request window:
+Open [http://localhost:3000](http://localhost:3000).
+
+| Interface | What you can do |
+| --- | --- |
+| [Interactive Demo](/) | Adjust RSI thresholds, compare strategy decisions, explore historical charts, and download results. |
+| [Developer Workspace](/workspace) | Test RSI, EMA crossover, breakout, and declarative strategies. Run or compare strategies and export replay manifests. |
+
+The included datasets support offline replay. Fetching new Phoenix market data requires network access.
+
+## Command-line usage
+
+Build the CLI and compare the included RSI strategies:
 
 ```bash
-npx tsx scripts/fetch-candles.ts --symbol SOL --timeframe 5m \
-  --from 2026-10-01T00:00:00Z --to 2026-10-08T00:00:00Z \
-  --out data/fixtures/candles/sol-5m-demo.json
+npm run build
+
+DATA=data/fixtures/candles/sol-5m-1790869255065-1791474055065.json
+
+node dist/src/cli.js compare --data "$DATA" \
+  --baseline dist/strategies/rsi-v1.js \
+  --candidate dist/strategies/rsi-v2.js \
+  --max-rows 3
 ```
 
-The equivalent `npm run fetch:candles -- ...` uses `node --import tsx`, which
-avoids the tsx CLI IPC socket restriction in some sandboxes. Collection requires
-public network access; tests and validation work offline. Existing output is
-refused unless `--force` is supplied. API errors abort without saving a successful
-partial collection. Incomplete coverage is saved with an explicit report and warning.
-Timeframes accept positive integer `m`, `h`, `d` notation; actual API acceptance is
-server-dependent. UTC timestamps must end in `Z`. Rolling windows default to 168 hours.
+### Example results
 
-`build` is a compatibility alias for `typecheck`; neither emits a distribution.
-No new dependencies were added. MIT license, copyright 2026 Anusha Saxena.
+Using the included SOL-PERP dataset:
 
-## Layout and public API
+| Decision | Original: RSI 30 | Updated: RSI 25 |
+| --- | ---: | ---: |
+| BUY | 22 | 8 |
+| SELL | 23 | 23 |
+| HOLD | 1,838 | 1,852 |
 
-- `src/data/types.ts`: typed version 1 fixture and integrity contracts.
-- `src/data/candle-validation.ts`: runtime validation and coverage math.
-- `src/data/candle-loader.ts`: strict offline JSON loader and legacy adapter.
-- `src/index.ts`: Stage 2 library exports.
-- `scripts/fetch-candles.ts`: network CLI; `candle-collector.ts` is injectable for tests.
-- `scripts/validate-candles.ts`: offline report CLI.
-- `scripts/experimental/`: preserved recorder, inspection and probe scripts.
-- `tests/data/`: synthetic unit tests plus offline validation of the real dataset.
-- `data/fixtures/candles/`: historical fixtures; ordinary collection never replaces them.
-- `data/raw/`, `data/inspection/`: ignored recordings and exploratory responses.
+**24 changed decisions · 1,859 unchanged decisions**
 
-The existing 60-snapshot recording remains at `data/sol-snapshots.json` and is
-ignored to avoid accidentally committing large raw data. Experiments run from the
-project root. The recorder now writes timestamped raw paths; inspection uses
-exclusive creation so it cannot overwrite the existing JSON.
+The comparison counts disagreements at individual events, so the number of changed decisions can differ from the difference in total BUY signals.
 
-See [fixture contract](docs/candle-fixtures.md) and [Stage 1 audit](docs/stage-1-audit.md).
+### Other commands
+
+```bash
+# Inspect a dataset and its coverage
+node dist/src/cli.js inspect --data "$DATA"
+
+# Replay a single strategy
+node dist/src/cli.js replay --data "$DATA" \
+  --strategy dist/strategies/rsi-v1.js
+
+# Discover built-in strategies
+npm run phoenix -- strategies
+
+# View available CLI options
+node dist/src/cli.js --help
+```
+
+To export a full comparison report, add:
+
+```bash
+--format json --out reports/comparison.json
+```
+
+Existing report files are not overwritten.
+
+## Catch regressions in CI
+
+Use a comparison budget to enforce expected behavior:
+
+```bash
+node dist/src/cli.js compare --data "$DATA" \
+  --baseline dist/strategies/rsi-v1.js \
+  --candidate dist/strategies/rsi-v2.js \
+  --max-changed-decisions 0
+```
+
+When no decision changes are expected, `--max-changed-decisions 0` makes unexpected differences fail the check.
+
+| Exit code | Meaning |
+| --- | --- |
+| `0` | Comparison completed and passed any configured budget |
+| `1` | Comparison exceeded the allowed decision-change budget |
+| `2` | Invalid command, configuration, or input data |
+
+Without a configured budget, strategy differences are reported without failing the command.
+
+Signals and missing decisions count as changes. Differences in explanation text alone do not. Data-quality warnings are reported separately.
+
+## Bring your own strategy
+
+Phoenix Replay Kit supports custom strategies through a TypeScript strategy interface.
+
+A custom strategy default-exports a factory that creates fresh strategy state for each replay.
+
+Start with:
+
+`examples/custom-ema-strategy.ts`
+
+During development, use `npm run phoenix -- ...` to work with TypeScript strategy modules. The built CLI loads JavaScript (`.js` / `.mjs`) modules.
+
+Built-in strategy examples include RSI threshold crossing, EMA crossover, breakout rules, funding-filtered RSI, and order-book imbalance.
+
+## How it works
+
+1. **Collect data.** Historical Phoenix market data is collected through the Rise SDK and saved as reproducible fixtures.
+2. **Replay strategies.** The TypeScript replay engine processes the same ordered data through independent strategy instances.
+3. **Compare decisions.** The comparison engine matches events and identifies BUY / SELL / HOLD disagreements.
+4. **Inspect and test.** The web app explains differences interactively, while the CLI supports automated regression checks.
+
+The CLI and web app reuse the same core replay and comparison logic.
+
+## Data provenance and limitations
+
+The included datasets support repeatable experiments, but they have important coverage and timing limitations.
+
+- **Candles:** The included SOL-PERP dataset contains 1,883 finalized five-minute candles, with 132 missing trailing expected candle buckets. Coverage warnings remain visible.
+- **Funding:** An optional RSI funding filter uses an explicit, assumed one-hour availability lag. Actual publication timing has not been verified.
+- **Order books:** The included data contains 60 sampled snapshots timestamped using local receipt times. It cannot reconstruct updates between samples.
+
+Replay uses explicit event-timing assumptions and compares **strategy decisions**, not executed trades.
+
+**This project does not execute orders, simulate fills, calculate P&L, or estimate profitability.** No wallet or trading credentials are required.
+
+Phoenix Replay Kit is an independent developer project, not an official Ellipsis Labs product.
+
+## Development
+
+```bash
+# Check TypeScript types
+npm run typecheck
+
+# Run automated tests
+npm test
+
+# Build the project
+npm run build
+```
+
+For browser-level testing and deployment configuration, see the web application under `apps/web/`.
+
+## Built with
+
+**TypeScript · Node.js · Next.js · React · Phoenix Rise SDK · Vitest · Playwright**

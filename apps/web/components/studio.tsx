@@ -147,7 +147,7 @@ export default function Studio() {
             <div>
               <dt>The solution</dt>
               <dd>
-                This is a data analytics tool that runs both versions on the same Phoenix market data, then
+                This is a data analytics & deterministic strategy replay tool that runs both versions on the same Phoenix market data, then
                 looks at every BUY, SELL, or HOLD decision that changed. 
               </dd>
             </div>
