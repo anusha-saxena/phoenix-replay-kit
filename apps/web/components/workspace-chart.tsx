@@ -25,18 +25,19 @@ export default function WorkspaceChart({
       autoSize: true,
       height: 300,
       layout: {
-        background: { type: ColorType.Solid, color: "#17191d" },
-        textColor: "#d0c6d0",
+        background: { type: ColorType.Solid, color: "#ffffff" },
+        textColor: "#000000",
+        fontSize: 14,
       },
       timeScale: { timeVisible: true, minBarSpacing: 0.05 },
-      grid: { vertLines: { visible: false }, horzLines: { color: "#30333a" } },
+      grid: { vertLines: { visible: false }, horzLines: { color: "#e5e5e5" } },
     });
     const price = graph.addSeries(CandlestickSeries, {
-      upColor: "#b4bfc1",
-      downColor: "#727d87",
+      upColor: "#000000",
+      downColor: "#666666",
       borderVisible: false,
-      wickUpColor: "#b4bfc1",
-      wickDownColor: "#727d87",
+      wickUpColor: "#000000",
+      wickDownColor: "#666666",
     });
     price.setData(
       snapshot.fixture.bars.map((b) => ({
@@ -63,7 +64,7 @@ export default function WorkspaceChart({
           const line = graph.addSeries(
             LineSeries,
             {
-              color: side ? "#91b4f1" : "#b0b8c5",
+              color: side ? "#000000" : "#666666",
               lineWidth: key === "fastEma" ? 2 : 1,
               title: `${side ? "Updated" : "Original"} ${key}`,
             },
@@ -79,7 +80,7 @@ export default function WorkspaceChart({
           time: (selected / 1000) as UTCTimestamp,
           position: "aboveBar",
           shape: "circle",
-          color: "#91b4f1",
+          color: "#000000",
           text: "Selected",
         },
       ]);

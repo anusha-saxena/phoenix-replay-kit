@@ -16,7 +16,7 @@ import { utc, rsiValue } from "../lib/presentation";
 const seconds = (ms: number) => (ms / 1000) as UTCTimestamp;
 const sides = ["baseline", "candidate"] as const;
 const labels = { baseline: "Original", candidate: "Updated" };
-const colors = { baseline: "#c3b5dd", candidate: "#efaac7" };
+const colors = { baseline: "#000000", candidate: "#666666" };
 export default function Charts({
   demo,
   result,
@@ -42,12 +42,13 @@ export default function Charts({
     const options = {
       autoSize: true,
       layout: {
-        background: { type: ColorType.Solid, color: "#141619" },
-        textColor: "#d0c6d0",
+        background: { type: ColorType.Solid, color: "#ffffff" },
+        textColor: "#000000",
+        fontSize: 14,
         attributionLogo: true,
         fontFamily: "Arial, Helvetica, sans-serif",
       },
-      grid: { vertLines: { visible: false }, horzLines: { color: "#25282e" } },
+      grid: { vertLines: { visible: false }, horzLines: { color: "#e5e5e5" } },
       timeScale: {
         timeVisible: true,
         secondsVisible: false,
@@ -61,10 +62,10 @@ export default function Charts({
     const rsi = createChart(rsiRef.current, { ...options, height: 170 });
     priceChart.current = price;
     const candles = price.addSeries(CandlestickSeries, {
-      upColor: "#b4bfc1",
-      downColor: "#727d87",
-      wickUpColor: "#b4bfc1",
-      wickDownColor: "#727d87",
+      upColor: "#000000",
+      downColor: "#666666",
+      wickUpColor: "#000000",
+      wickDownColor: "#666666",
       borderVisible: false,
       priceLineVisible: false,
       lastValueVisible: false,

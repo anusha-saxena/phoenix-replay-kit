@@ -128,7 +128,7 @@ export default function Studio() {
         <section id="overview" className="intro">
           <p className="eyebrow intro-kicker">Strategy Regression Testing</p>
           <h1>What happens when a developer updates a trading strategy?</h1>
-          <p className="eyebrow">Made with ♡ by Anusha</p>
+          <p className="eyebrow author-credit">Made with ♡ by Anusha</p>
 
           <p className="lead">
             Even a small change in strategy logic can change when it generates
@@ -148,7 +148,7 @@ export default function Studio() {
               <dt>The solution</dt>
               <dd>
                 This is a data analytics & deterministic strategy replay tool that runs both versions on the same Phoenix market data, then
-                looks at every BUY, SELL, or HOLD decision that changed. 
+                looks at every BUY, SELL, or HOLD decision that changed.
               </dd>
             </div>
           </dl>
@@ -579,7 +579,7 @@ export default function Studio() {
               </button>
             </div>
             <pre>{cli}</pre>
-            <a href={`${github}/blob/main/README.md`}>
+            <a href={`${github}/blob/main/CLI.md`}>
               Read the CLI documentation ↗
             </a>
           </details>
