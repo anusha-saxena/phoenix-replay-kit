@@ -5,8 +5,8 @@
   --surface: #17191d;
   --border: #30333a;
   --text: #f4edf5;
-  --body: #d1d5db;
-  --muted: #bcb0b9;
+  --body: #e0e2e7;
+  --muted: #d0c6d0;
   --accent: #c3b5dd;
 }
 * {
@@ -629,7 +629,7 @@ pre {
 }
 .data-note {
   font-size: 13px;
-  color: #c1b7a2;
+  color: #d6cdbb;
 }
 .metadata {
   margin: 18px 0 0;

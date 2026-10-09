@@ -26,7 +26,7 @@ export default function WorkspaceChart({
       height: 300,
       layout: {
         background: { type: ColorType.Solid, color: "#17191d" },
-        textColor: "#adb0b9",
+        textColor: "#d0c6d0",
       },
       timeScale: { timeVisible: true, minBarSpacing: 0.05 },
       grid: { vertLines: { visible: false }, horzLines: { color: "#30333a" } },

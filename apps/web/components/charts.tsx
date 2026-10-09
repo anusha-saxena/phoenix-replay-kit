@@ -43,7 +43,7 @@ export default function Charts({
       autoSize: true,
       layout: {
         background: { type: ColorType.Solid, color: "#141619" },
-        textColor: "#a4aab4",
+        textColor: "#d0c6d0",
         attributionLogo: true,
         fontFamily: "Arial, Helvetica, sans-serif",
       },
